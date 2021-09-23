@@ -7,4 +7,4 @@
     echo "Hellow World";
     ?>
 </body>
-</html> [EOF]
+</html>
