@@ -6,7 +6,7 @@
     <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="my-box">
     <!-- ヘッダー開始 -->
     <!-- ヘッダー終了 -->
     <!-- メイン開始 -->
