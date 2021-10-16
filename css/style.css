@@ -1,0 +1,20 @@
+@charset "utf-8"
+
+/* webページ全体に適用　*/
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: aliceblue;
+}
+
+wrapper {
+    margin: auto auto;
+    width: 1280px;
+}
+h1 {
+    color: #44110e;
+    font-size: 26px;
+    border-bottom: 1px soli #44110e;
+    margin: 20px 0px 30px 0px;
+    padding: 10px 10px 10px 20px;
+}
