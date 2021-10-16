@@ -3,7 +3,7 @@
  <head>
    <meta charset="UTF-8">
     <title>ユーザーログイン画面</title>
-    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="css/style.css">
+    <LINK rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="my-box">
