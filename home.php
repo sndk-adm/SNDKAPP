@@ -18,7 +18,17 @@
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
     <div class="ck">
-    <h2>User Login</h2>
+    <h2>Information</h2>
+    <table class="info">
+    <tr>
+      <th>Employee Code</th> <!--表の見出し-->
+      <td> 140047 </td> <!--表のデータ-->
+    </tr>
+    <tr>
+      <th>Employee Name</th>
+      <td> Taro </td>
+    </tr>
+    </table>
     
     <?php
     echo '入力内容の確認';
