@@ -36,7 +36,7 @@
     <div class="ck">
       <h2>User Login</h2>
        
-      <h1>Please Enter login</h1>
+      <h3>Please Enter login</h3>
       <form  action="login.php" method="post">
       <label for="email">email</label>
       <input type="email" name="email">
@@ -46,7 +46,7 @@
       <button type="submit">Sign In</button>
       </form>
 
-      <h1>New registration is here</h1>
+      <h3>New registration is here</h3>
       <form action="signUp.php" method="post">
       <label for="email">email</label>
       <input type="email" name="email">
