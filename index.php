@@ -46,19 +46,12 @@
       <button type="submit">Sign In</button>
       </form>
 
-      <h3>New registration is here</h3>
-      <form action="signUp.php" method="post">
-      <label for="email">email</label>
-      <input type="email" name="email">
-
-      <label for="password">password</label>
-      <input type="password" name="password">
-      <button type="submit">Sign Up</button>
-      <p>※パスワードは半角英数字をそれぞれ１文字以上含んだ、８文字以上で設定してください。</p>
       </form>
     </div>
   </div>
      
+  <li><a href="register.php">New Registration</a></li>
+
     <!-- メイン終了 -->
 
     <!-- フッター開始 -->
