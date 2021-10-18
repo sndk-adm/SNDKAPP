@@ -21,7 +21,7 @@
     <LINK rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
+  <div id="MIDASHI_box">
     <!-- ヘッダー開始 -->
     <h1>User Login</h1>
     <!-- ヘッダー終了 -->
