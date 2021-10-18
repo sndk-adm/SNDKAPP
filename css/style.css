@@ -64,6 +64,18 @@ table.info th {
     color: brown;
 }
 
+.MIDASHI_box {
+    padding: 1em 1.5em;
+    margin: 2em 0;
+    border: solid 1px #44110e;/*線*/
+    background-color: #44110e;
+}
+.MIDASHI_box p {
+    margin: 0; 
+    padding: 0;
+    color: #ffffff;
+}
+
 /* webページ全体に適用 --フッター部分--　*/
 #footer{
     text-align: center;

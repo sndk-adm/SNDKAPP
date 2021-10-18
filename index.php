@@ -23,18 +23,11 @@
 <body>
   <div class="wrapper">
     <!-- ヘッダー開始 -->
-      <ul id="nav">
-      <li><a href="home.php">HOME</a></li>
-      <li><a href="home.php">USER SETING</a></li>
-      <li><a href="index.php">APPLICATION</a></li>
-      <li><a href="index.php">REFERENCE</a></li>
-      </ul>
-    <h1 id=""></h1>
+    <h1>User Login</h1>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
         
     <div class="ck">
-      <h2>User Login</h2>
        
       <h3>Please Enter login</h3>
       <form  action="login.php" method="post">
@@ -49,7 +42,8 @@
       </form>
     </div>
   </div>
-     
+  <br>
+  <br>
   <li><a href="register.php">New Registration</a></li>
 
     <!-- メイン終了 -->
