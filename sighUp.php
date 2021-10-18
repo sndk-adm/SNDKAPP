@@ -13,7 +13,7 @@ try {
       surname_en varchar(20) not null,
       date_birth date not null,
       email char(30) unique,
-      password varchar(30) not null,
+      password varchar(10) not null,
       created timestamp not null default current_timestamp
     )");
 } catch (Exception $e) {
