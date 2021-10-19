@@ -4,7 +4,7 @@
 body{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    background-color: aliceblue;
+    background-color: rgb(84, 173, 104);
 }
 
 .wrapper {
@@ -16,8 +16,19 @@ h1 {
     font-size: 26px;
     border-bottom: 1px solid #44110e;
     margin: 20px 0px 30px 0px;
-    padding: 10px 10px 10px 20px;
-}
+    padding: 10px 10px 10px 20px;}
+.SUB_TX {
+        color: #44110e;
+        font-size: 26px;
+        border-bottom: 1px solid #44110e;
+        width: 1000px;
+        margin: 20px 10px 30px 10px; /*マージン上-右-下-左*/
+        padding: 10px 10px 10px 10px;}
+.FILL_TX {
+        font-size: 20px;
+        margin: 10px 10px 10px 10px; /*マージン上-右-下-左*/
+        padding: 10px 10px 10px 10px;}
+
 h3 {
     color: #44110e;
     font-size: 20px;
@@ -64,12 +75,18 @@ table.info th {
     color: brown;
 }
 
-.MIDASHI_box {
-    padding: 1em 1.5em;
-    margin: 2em 0;
+.REG_BOX{ /*見出しClass指定*/
+    margin: 10px;
+    padding: 10px;
+    height: 30px;
+    width: 1000px;
+    border: solid 2px #44110e;background-color: #44110e;
+}
+.REG_BOX_TX{
     color: #ffffff;
-    border: solid 1px #44110e;/*線*/
-    background-color: #44110e;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 30px;
 }
 
 
@@ -77,7 +94,8 @@ table.info th {
 #footer{
     text-align: center;
     border-top: 1px solid #44110e;
+    width: 1000px;
     margin-top: 30px;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 20px 10px;
     color: #44110e;
 }

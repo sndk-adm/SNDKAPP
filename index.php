@@ -20,31 +20,29 @@
     <title>LOGIN MENU</title>
     <LINK rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-  <div id="MIDASHI_box">
+    <div id="MIDASHI_box">
     <!-- ヘッダー開始 -->
     <h1>User Login</h1>
+    </div>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
-        
-    <div class="ck">
-       
+      
       <h3>Please Enter login</h3>
       <form  action="login.php" method="post">
+
       <label for="email">email</label>
       <input type="email" name="email">
 
       <label for="password">password</label>
       <input type="password" name="password">
       <button type="submit">Sign In</button>
-      </form>
 
-      </form>
-    </div>
-  </div>
-  <br>
-  <br>
-  <li><a href="register.php">New Registration</a></li>
+      </form> 
+      <br>
+      <br>
+      <li><a href="register.php">New Registration</a></li>
 
     <!-- メイン終了 -->
 
