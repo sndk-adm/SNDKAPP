@@ -22,23 +22,25 @@
 </head>
 
 <body>
-    <div id="MIDASHI_box">
     <!-- ヘッダー開始 -->
-    <h1>User Login</h1>
+    <div class="REG_BOX">
+    <div class="REG_BOX_TX">User Login</div>
     </div>
     <!-- ヘッダー終了 -->
+    
     <!-- メイン開始 --> 
-      
-      <h3>Please Enter login</h3>
+    <!-- サブ見出し --> 
+     <div class="SUB_TX">Please Enter E-mail & login Password</div>  
+    
       <form  action="login.php" method="post">
 
-      <label for="email">email</label>
+      <label for="email">E-mail</label>
       <input type="email" name="email">
-
-      <label for="password">password</label>
+      <br><br>
+      <label for="password">Password</label>
       <input type="password" name="password">
+      <br><br>
       <button type="submit">Sign In</button>
-
       </form> 
       <br>
       <br>
@@ -48,7 +50,7 @@
 
     <!-- フッター開始 -->
     <div id="footer">
-        <small>&copy;Copyright   SIAM NDK.All rights reserved.</small>
+        <small>&copy;Copyright　-   SIAM NDK.All rights reserved.</small>
     </div>
     <!-- フッター終了 -->
   
