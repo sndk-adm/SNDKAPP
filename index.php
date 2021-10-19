@@ -31,21 +31,21 @@
     <!-- メイン開始 --> 
     <!-- サブ見出し --> 
      <div class="SUB_TX">Please Enter E-mail & login Password</div>  
-    
+     <div class="FILL_TX">
       <form  action="login.php" method="post">
 
       <label for="email">E-mail</label>
-      <input type="email" name="email">
+      <input type="email" name="email"style="margin-left: 28px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <label for="password">Password</label>
-      <input type="password" name="password">
+      <input type="password" name="password"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <button type="submit">Sign In</button>
       </form> 
       <br>
       <br>
       <li><a href="register.php">New Registration</a></li>
-
+     </div>
     <!-- メイン終了 -->
 
     <!-- フッター開始 -->
