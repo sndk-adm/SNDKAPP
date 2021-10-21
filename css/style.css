@@ -90,13 +90,21 @@ table.info th {
     font-size: 30px;
 }
 
+.Reg_BUTTON{
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #68779a;
+    background: #cbe8fa;
+    cursor: pointer;
+}
 
 /* webページ全体に適用 --フッター部分--　*/
 #footer{
     text-align: center;
     border-top: 1px solid #44110e;
     width: 1000px;
-    margin: 30px 10px 30px 10px; /*マージン上-右-下-左*/
+    margin: 30px 10px 30px 20px; /*マージン上-右-下-左*/
     padding: 20px 10px 20px 10px;}
     color: #44110e;
 }

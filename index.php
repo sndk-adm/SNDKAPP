@@ -31,6 +31,7 @@
     <!-- メイン開始 --> 
     <!-- サブ見出し --> 
      <div class="SUB_TX">Please Enter E-mail & login Password</div>  
+
      <div class="FILL_TX">
       <form  action="login.php" method="post">
 
@@ -40,7 +41,7 @@
       <label for="password">Password</label>
       <input type="password" name="password"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
-      <button type="submit">Sign In</button>
+      <button type="submit" class="Reg_BUTTON">Sign In</button>
       </form> 
       <br>
       <br>
