@@ -20,9 +20,10 @@ try{
 
     print('接続に成功しました。<br>');
 
-    $sql = 'SELECT * FROM LOGIN_EMP';
+    $sql = 'SELECT * FROM login_emp';
     foreach ($dbh->query($sql) as $row) {
         print(convert_enc($row['id']));
+        print(convert_enc($row['email']).'<br>');
         print(convert_enc($row['name_en']).'<br>');
     }
 }catch (PDOException $e){
