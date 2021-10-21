@@ -9,7 +9,7 @@ function convert_enc($str){
     $to_enc = 'SJIS';
 
     return mb_convert_encoding($str, $to_enc, $from_enc);
-}
+    }
 
 $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
 $user = 'hhmxfllafjsciw';
@@ -21,11 +21,11 @@ try{
     print('接続に成功しました。<br>');
 
     $sql = 'SELECT * FROM login_emp';
-    foreach ($dbh->query($sql) as $row) {
-        print(convert_enc($row['id']));
-        print(convert_enc($row['email']).'<br>');
-        print(convert_enc($row['name_en']).'<br>');
-    }
+    foreach ($stmt as $row) {
+        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
+        echo '<br>';
+        }
+    
 }catch (PDOException $e){
     print('Error:'.$e->getMessage());
     die();
