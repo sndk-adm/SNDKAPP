@@ -91,12 +91,8 @@ table.info th {
 }
 
 .Reg_BUTTON{
-    width: 300px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #68779a;
-    background: #cbe8fa;
-    cursor: pointer;
+    height:100px;
+    width:100px;
 }
 
 /* webページ全体に適用 --フッター部分--　*/
