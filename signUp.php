@@ -8,7 +8,7 @@ try {
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、PDOExceptionの例外を投げる。//
 
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
-  $pdo->exec("create table if not exists LOGIN_EMP(
+  $pdo->exec("create table if not exists login_emp(
       id serial primary key,
       empcode char(10) unique,
       prefix_en int not null,
@@ -42,7 +42,7 @@ else {
 
 //登録処理
 try {
-  $stmt = $pdo->prepare("insert into LOGIN_EMP(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
+  $stmt = $pdo->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
   $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
   echo '登録完了';
   print $rec['id'];
