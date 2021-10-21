@@ -1,11 +1,11 @@
 <?php
-require_once("config.php");//config.phpの読み込み
+require_once('config.php');//config.phpの読み込み
 
 //データベースへ接続、テーブルがない場合は作成
 try {
   $pdo = new PDO(DSN, DB_USER, DB_PASS);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  // PDO::ATTR_ERRMODEという属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、PDOExceptionの例外を投げてくれます。//
+  // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、PDOExceptionの例外を投げる。//
 
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
   $pdo->exec("create table if not exists LOGIN_EMP(
