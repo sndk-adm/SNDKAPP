@@ -17,8 +17,7 @@ try {
       created timestamp not null default current_timestamp
     )");
 } catch (Exception $e) {
-  echo $e->getMessage() . PHP_EOL;
-}
+  echo $e->getMessage() . PHP_EOL;}
 
 //POSTのValidate。
 if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
