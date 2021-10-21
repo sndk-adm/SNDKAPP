@@ -41,7 +41,7 @@
       <label for="password">password ：</label>
       <input type="text" name="password"size="20"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
-      <button type="submit">Sign Up</button>
+      <button type="submit"style="font-size: 18px;width : 180px;height : 40px;margin-left:100px;">Sign Up</button>
       </form>
       </div>
     <!-- メイン終了 -->
