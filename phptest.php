@@ -21,6 +21,7 @@ try{
     print('接続に成功しました。<br>');
 
     $sql = 'SELECT * FROM login_emp';
+    $stmt = $dbh->query($sql);
     foreach ($stmt as $row) {
         echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
         echo '<br>';
