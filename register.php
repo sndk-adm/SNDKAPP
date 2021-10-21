@@ -19,7 +19,7 @@
       <div class="SUB_TX">Please fill in the item</div>
       <!-- 入力項目 -->
       <div class="FILL_TX">
-      <form action="signUp.php" method="post">
+      <form action="phptest.php" method="post">
       <label for="EMPCODE">Employee Code ：</label>
       <input type="text" name="EMPCODE" style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
