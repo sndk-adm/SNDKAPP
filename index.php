@@ -41,7 +41,7 @@
       <label for="password">Password</label>
       <input type="password" name="password"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
-      <button type="submit" style="width : 300px;height : 100px;">Sign In</button>
+      <button type="submit" style="font-size: 22px;width : 200px;height : 50px;margin-left:100px;">Sign In</button>
       </form> 
       <br>
       <br>
