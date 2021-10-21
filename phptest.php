@@ -20,7 +20,7 @@ try{
 
     print('接続に成功しました。<br>');
 
-    $sql = 'select * from LOGIN_EMP';
+    $sql = 'SELECT * FROM LOGIN_EMP';
     foreach ($dbh->query($sql) as $row) {
         print(convert_enc($row['id']));
         print(convert_enc($row['name_en']).'<br>');
