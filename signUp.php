@@ -1,5 +1,6 @@
 <?php
-require_once('config.php');
+require_once("config.php");//config.phpの読み込み
+
 //データベースへ接続、テーブルがない場合は作成
 try {
   $pdo = new PDO(DSN, DB_USER, DB_PASS);
@@ -17,9 +18,15 @@ try {
       email char(30) unique,
       password varchar(10) not null,
       created timestamp not null default current_timestamp
-    )");
-} catch (Exception $e) {
+    )");}
+catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;}
+
+$empcode = ($_POST['EMPCODE']);
+$prefix_en = ($_POST['PREFIX_EN']);
+$name_en = ($_POST['NAME']);
+$surname_en = ($_POST['SURNAME']);
+$date_birth = ($_POST['DATE_BIRTH']);
 
 //emailデータ型の検証
 if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -28,19 +35,19 @@ if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 }
 //パスワードの正規表現
 if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{4,100}+\z/i', $_POST['password'])) {
-  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-} else {
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);}
+else {
   echo 'パスワードは半角英数字をそれぞれ1文字以上含んだ4文字以上で設定してください。';
-  return false;
-}
+  return false;}
+
 //登録処理
 try {
   $stmt = $pdo->prepare("insert into LOGIN_EMP(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
   $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
   echo '登録完了';
   print $rec['id'];
-  print '<a href="https://sndk-adm.herokuapp.com/">'.$rec['id'].'</a>';
-} catch (\Exception $e) {
-  echo '登録済みです。';
-}
+  print '<a href="https://sndk-adm.herokuapp.com/">'.$rec['id'].'</a>';}
+catch (\Exception $e) {
+  echo '登録済みです。';}
+  
 ?>
