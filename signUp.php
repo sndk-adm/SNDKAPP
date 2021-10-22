@@ -38,7 +38,7 @@ catch (Exception $e) {
  
 //emailデータ型の検証 
 if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
-  echo '入力された値が不正です。';
+  echo 'メールアドレスが不正です。';
   return false;  }
 
 //パスワードの正規表現
