@@ -10,17 +10,17 @@
    <script type="text/javascript">
    
     function check () {
-    var EMPCODE = document.loginForm.EMPCODE.value;
-    var PREFIX_EN = document.loginForm.PREFIX_EN,value;
+    var EMPCODE = document.regForm.EMPCODE.value;
+    var PREFIX_EN = document.regForm.PREFIX_EN,value;
 
     if ( EMPCODE == "" ) {
     alert ( "EMPCODEを入力して下さい。" );
-    document.loginForm.EMPCODE.focus();
+    document.regForm.EMPCODE.focus();
     return false;
     }
     if ( PREFIX_EN == "" ) {
     alert ( "PREFIX_ENを入力して下さい。" );
-    document.loginForm.PREFIX_EN.focus();
+    document.regForm.PREFIX_EN.focus();
     return false;
     }
     return true;
@@ -41,7 +41,7 @@
       <div class="SUB_TX">Please fill in the item</div>
       <!-- 入力項目 -->
       <div class="FILL_TX">
-      <form action="signUp.php" method="post" onSubmit="return check();">
+      <form action="signUp.php" method="post" name="regForm" onSubmit="return check();">
       <label for="EMPCODE">Employee Code ：</label>
       <input type="text" name="EMPCODE" style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
