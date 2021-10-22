@@ -20,8 +20,8 @@ $prefix_en = ($_POST['PREFIX_EN']);
 $name_en = ($_POST['NAME']);
 $surname_en = ($_POST['SURNAME']);
 $date_birth = ($_POST['DATE_BIRTH']);
-$email=($_POST['email'])
-$passcode=($_POST['password'])
+$email=($_POST['email']);
+$passcode=($_POST['password']);
 
 echo "$empcode" ;
 echo '<br>';
