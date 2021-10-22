@@ -1,7 +1,7 @@
 <html>
 <head><title>signup</title></head>
-<body>
 
+<body>
 <?php
 require_once('config.php');//config.phpの読み込み
 
@@ -50,12 +50,6 @@ catch (Exception $e) {
   echo "$passcode" ;
   echo '<br>';
 
-  $sql = 'SELECT * FROM login_emp';
-    $stmt = $dbh->query($sql);
-    foreach ($stmt as $row) {
-        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
-        echo '<br>';
-
 //emailデータ型の検証
 // if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 //   echo '入力された値が不正です。';
@@ -78,6 +72,9 @@ catch (Exception $e) {
 // catch (\Exception $e) {
 //   echo '登録済みです。';}
   
+$pdo=null;
+
 ?>
+
 </body>
 </html>
