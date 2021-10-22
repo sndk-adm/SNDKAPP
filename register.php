@@ -8,7 +8,6 @@
 
    <!-- 入力データのチェックをReturnで返す -->
    <script type="text/javascript">
-   
     function check () {
     var EMPCODE = document.regForm.EMPCODE.value;
     let PREFIX_EN = document.regForm.PREFIX_EN.value;
@@ -53,6 +52,7 @@
     document.regForm.password.focus();
     return false;
     }
+    return True;
     </script>
  </head>
 
