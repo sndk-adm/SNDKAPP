@@ -26,7 +26,8 @@
     alert ( "PREFIX_ENを入力して下さい。" );
     document.regForm.EMPCODE.focus();
     return false;
-    }
+    }}
+    //return True;
     // if ( NAME == "" ) {
     // alert ( "NAMEを入力して下さい。" );
     // document.regForm.NAME.focus();
@@ -52,7 +53,7 @@
     // document.regForm.password.focus();
     // return false;
     // }
-    return True;
+    
     </script>
  </head>
 
