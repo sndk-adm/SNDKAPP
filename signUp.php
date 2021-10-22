@@ -33,23 +33,16 @@ catch (Exception $e) {
   $surname_en = ($_POST['SURNAME']);
   $date_birth = ($_POST['DATE_BIRTH']);
   $email=($_POST['email']);
-  $passcode=($_POST['password']);
+  $password=($_POST['password']);
     
-   $sql = 'SELECT * FROM login_emp';
-   $stmt = $dbh->query($sql);
-   foreach ($stmt as $row) {
-    echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
-    echo '<br>';
-    }
-
-emailデータ型の検証
-if (!$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+ 
+//emailデータ型の検証
+if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
   echo '入力された値が不正です。';
-  return false;
-}
+  return false;  }
+
 //パスワードの正規表現
-if (preg_match('/^[a-z0-9_]{4,10}$/i', $_POST['password'])) {
-  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);}
+if (preg_match('/^[a-z0-9_]{4,10}$/i', $password)) {}
 else {
   echo 'パスワードは半角英数字を4文字以上で設定してください。';
   return false;}
