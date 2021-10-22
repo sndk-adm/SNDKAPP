@@ -20,15 +20,23 @@ $prefix_en = ($_POST['PREFIX_EN']);
 $name_en = ($_POST['NAME']);
 $surname_en = ($_POST['SURNAME']);
 $date_birth = ($_POST['DATE_BIRTH']);
+$email=($_POST['email'])
+$passcode=($_POST['password'])
 
 echo "$empcode" ;
-'\n';
+echo '<br>';
 echo "$prefix_en" ;
-'\n';
-echo "$prefix_en" ;
+echo '<br>';
 echo "$name_en" ;
+echo '<br>';
 echo "$surname_en" ;
+echo '<br>';
 echo "$date_birth" ;
+echo '<br>';
+echo "$email" ;
+echo '<br>';
+echo "$passcode" ;
+echo '<br>';
 
 try{
     $dbh = new PDO($dsn, $user, $password);
