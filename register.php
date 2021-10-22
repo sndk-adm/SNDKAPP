@@ -11,11 +11,11 @@
     function check () {
     var EMPCODE = document.regForm.EMPCODE.value;
     let PREFIX_EN = document.regForm.PREFIX_EN.value;
-    var NAME = document.regForm.NAME.value;
-    var SURNAME = document.regForm.SURNAME.value;
-    let DATE_BIRTH = document.regForm.DATE_BIRTH.value;
-    var email = document.regForm.email.value;
-    var password = document.regForm.password.value;
+    // var NAME = document.regForm.NAME.value;
+    // var SURNAME = document.regForm.SURNAME.value;
+    // let DATE_BIRTH = document.regForm.DATE_BIRTH.value;
+    // var email = document.regForm.email.value;
+    // var password = document.regForm.password.value;
 
     if ( EMPCODE == "" ) {
     alert ( "EMPCODEを入力して下さい。" );
@@ -27,31 +27,31 @@
     document.regForm.EMPCODE.focus();
     return false;
     }
-    if ( NAME == "" ) {
-    alert ( "NAMEを入力して下さい。" );
-    document.regForm.NAME.focus();
-    return false;
-    }
-    if ( SURNAME == "" ) {
-    alert ( "SURNAMEを入力して下さい。" );
-    document.regForm.SURNAME.focus();
-    return false;
-    }
-    if ( DATE_BIRTH == "" ) {
-    alert ( "DATE_BIRTHを入力して下さい。" );
-    document.regForm.DATE_BIRTH.focus();
-    return false;
-    }
-    if ( email == "" ) {
-    alert ( "emailを入力して下さい。" );
-    document.regForm.email.focus();
-    return false;
-    }
-    if ( password == "" ) {
-    alert ( "passwordを入力して下さい。" );
-    document.regForm.password.focus();
-    return false;
-    }
+    // if ( NAME == "" ) {
+    // alert ( "NAMEを入力して下さい。" );
+    // document.regForm.NAME.focus();
+    // return false;
+    // }
+    // if ( SURNAME == "" ) {
+    // alert ( "SURNAMEを入力して下さい。" );
+    // document.regForm.SURNAME.focus();
+    // return false;
+    // }
+    // if ( DATE_BIRTH == "" ) {
+    // alert ( "DATE_BIRTHを入力して下さい。" );
+    // document.regForm.DATE_BIRTH.focus();
+    // return false;
+    // }
+    // if ( email == "" ) {
+    // alert ( "emailを入力して下さい。" );
+    // document.regForm.email.focus();
+    // return false;
+    // }
+    // if ( password == "" ) {
+    // alert ( "passwordを入力して下さい。" );
+    // document.regForm.password.focus();
+    // return false;
+    // }
     return True;
     </script>
  </head>
