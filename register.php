@@ -11,7 +11,8 @@
    
     function check () {
     var EMPCODE = document.regForm.EMPCODE.value;
-    
+    let PREFIX_EN = document.regForm.PREFIX_EN.value;
+
     if ( EMPCODE == "" ) {
     alert ( "EMPCODEを入力して下さい。" );
     document.regForm.EMPCODE.focus();
