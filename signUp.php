@@ -7,27 +7,27 @@ require_once('config.php');//config.phpの読み込み
 
 print('接続に成功しました。<br>');
 
-//データベースへ接続、テーブルがない場合は作成
-try {
-  $pdo = new PDO(DSN, DB_USER, DB_PASS);
+// //データベースへ接続、テーブルがない場合は作成
+// try {
+//   $pdo = new PDO(DSN, DB_USER, DB_PASS);
   
-  // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
-  // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
+//   // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
+//   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-  //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
-  $pdo->exec("create table if not exists login_emp(
-      id serial primary key,
-      empcode char(10) unique,
-      prefix_en int not null,
-      name_en varchar(20) not null,
-      surname_en varchar(20) not null,
-      date_birth date not null,
-      email char(30) unique,
-      password varchar(10) not null)");
-  }
-catch (Exception $e) {
-  echo $e->getMessage() . PHP_EOL;}
+//   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
+//   $pdo->exec("create table if not exists login_emp(
+//       id serial primary key,
+//       empcode char(10) unique,
+//       prefix_en int not null,
+//       name_en varchar(20) not null,
+//       surname_en varchar(20) not null,
+//       date_birth date not null,
+//       email char(30) unique,
+//       password varchar(10) not null)");
+//   }
+// catch (Exception $e) {
+//   echo $e->getMessage() . PHP_EOL;}
 
 $empcode = ($_POST['EMPCODE']);
 $prefix_en = ($_POST['PREFIX_EN']);
@@ -51,6 +51,23 @@ $passcode=($_POST['password']);
   echo '<br>';
   echo "$passcode" ;
   echo '<br>';
+
+  try{
+    $dbh = new PDO($dsn, $user, $password);
+
+    print('接続に成功しました。<br>');
+
+    $sql = 'SELECT * FROM login_emp';
+    $stmt = $dbh->query($sql);
+    foreach ($stmt as $row) {
+        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
+        echo '<br>';
+        }
+    
+}catch (PDOException $e){
+    print('Error:'.$e->getMessage());
+    die();
+}
 
 //emailデータ型の検証
 // if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
