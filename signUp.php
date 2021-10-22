@@ -47,15 +47,16 @@ else {
   echo 'パスワードは半角英数字を4文字以上で設定してください。';
   return false;}
 
-// //登録処理
-// try {
-//   $stmt = $pdo->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
-//   $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
-//   echo '登録完了';
-//   print $rec['id'];
-//   print '<a href="https://sndk-adm.herokuapp.com/">'.$rec['id'].'</a>';}
-// catch (\Exception $e) {
-//   echo '登録済みです。';}
+//登録処理
+try {
+  $stmt = $dbh->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
+  $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
+  echo '登録完了';
+  print $rec['id'];
+  print '<a href="https://sndk-adm.herokuapp.com/">'.$rec['id'].'</a>';}
+  
+catch (\Exception $e) {
+  echo '登録済みです。';}
   
 $dbh = null;
 
