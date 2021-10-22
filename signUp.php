@@ -3,7 +3,7 @@
 
 <body>
 <?php
-require('config.php');//config.phpの読み込み
+require_once('config.php');//config.phpの読み込み
 
 print('接続に成功しました。<br>');
 
