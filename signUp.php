@@ -45,6 +45,11 @@ if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
 if (preg_match('/^[a-z0-9_]{4,10}$/i', $password)) {}
 else {
   echo 'パスワードは半角英数字を4文字以上で設定してください。';
+  echo '<br>';
+  echo '<br>';
+
+  echo "<a href=\"https://sndk-adm.herokuapp.com/register.php\">Back to New Registration</a>";
+
   return false;}
 
 //登録処理
@@ -52,11 +57,12 @@ try {
   $stmt = $dbh->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
   $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
   echo '登録完了';
-  print $rec['id'];
-  print '<a href="https://sndk-adm.herokuapp.com/">'.$rec['id'].'</a>';}
+  }
   
 catch (\Exception $e) {
-  echo '登録済みです。';}
+  echo '登録済みです。';
+  echo "<a href=\"https://sndk-adm.herokuapp.com/register.php\">Back to New Registration</a>";
+}
   
 $dbh = null;
 
