@@ -43,15 +43,15 @@ catch (Exception $e) {
     }
 
 emailデータ型の検証
-if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+if (!$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
   echo '入力された値が不正です。';
   return false;
 }
 //パスワードの正規表現
-if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{4,100}+\z/i', $_POST['password'])) {
+if (preg_match('/^[a-z0-9_]{4,10}$/i', $_POST['password'])) {
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);}
 else {
-  echo 'パスワードは半角英数字をそれぞれ1文字以上含んだ4文字以上で設定してください。';
+  echo 'パスワードは半角英数字を4文字以上で設定してください。';
   return false;}
 
 // //登録処理
