@@ -36,7 +36,7 @@ catch (Exception $e) {
   $password=($_POST['password']);
     
  
-//emailデータ型の検証
+//emailデータ型の検証 
 if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
   echo '入力された値が不正です。';
   return false;  }
@@ -60,6 +60,9 @@ else {
 $dbh = null;
 
 ?>
+<br>
+<br>
+<li><a href="register.php">Back to New Registration</a></li>
 
 </body>
 </html>
