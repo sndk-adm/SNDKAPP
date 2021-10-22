@@ -6,9 +6,8 @@
 require_once('config.php');//config.phpの読み込み
 
 //データベースへ接続、テーブルがない場合は作成
-try {
-  $pdo = new PDO(DSN, DB_USER, DB_PASS);
-  
+try {  $dbh = new PDO($dsn, $user, $password);
+
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
   // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -23,40 +22,42 @@ try {
       date_birth date not null,
       email char(30) unique,
       password varchar(10) not null)");
+  
+      $empcode = ($_POST['EMPCODE']);
+      $prefix_en = ($_POST['PREFIX_EN']);
+      $name_en = ($_POST['NAME']);
+      $surname_en = ($_POST['SURNAME']);
+      $date_birth = ($_POST['DATE_BIRTH']);
+      $email=($_POST['email']);
+      $passcode=($_POST['password']);
+        
+        echo "$empcode" ;
+        echo '<br>';
+        echo "$prefix_en" ;
+        echo '<br>';
+        echo "$name_en" ;
+        echo '<br>';
+        echo "$surname_en" ;
+        echo '<br>';
+        echo "$date_birth" ;
+        echo '<br>';
+        echo "$email" ;
+        echo '<br>';
+        echo "$passcode" ;
+        echo '<br>';
+
+       $sql = 'SELECT * FROM login_emp';
+       $stmt = $dbh->query($sql);
+       foreach ($stmt as $row) {
+        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
+        echo '<br>';
+        }
+
   }
 catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;}
 
-$empcode = ($_POST['EMPCODE']);
-$prefix_en = ($_POST['PREFIX_EN']);
-$name_en = ($_POST['NAME']);
-$surname_en = ($_POST['SURNAME']);
-$date_birth = ($_POST['DATE_BIRTH']);
-$email=($_POST['email']);
-$passcode=($_POST['password']);
-  
-  echo "$empcode" ;
-  echo '<br>';
-  echo "$prefix_en" ;
-  echo '<br>';
-  echo "$name_en" ;
-  echo '<br>';
-  echo "$surname_en" ;
-  echo '<br>';
-  echo "$date_birth" ;
-  echo '<br>';
-  echo "$email" ;
-  echo '<br>';
-  echo "$passcode" ;
-  echo '<br>';
 
-  $sql = 'SELECT * FROM login_emp';
-  $stmt = $dbh->query($sql);
-    foreach ($stmt as $row) {
-        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
-        echo '<br>';
-        }
- 
 
 //emailデータ型の検証
 // if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
