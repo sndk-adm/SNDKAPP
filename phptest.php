@@ -21,11 +21,14 @@ $name_en = ($_POST['NAME']);
 $surname_en = ($_POST['SURNAME']);
 $date_birth = ($_POST['DATE_BIRTH']);
 
-echo "$empcode" "\n"
-echo "$prefix_en" "\n"
-echo "$name_en"  "\n"
-echo "$surname_en" "\n"
-echo "$date_birth" "\n"
+echo "$empcode" ;
+'\n';
+echo "$prefix_en" ;
+'\n';
+echo "$prefix_en" ;
+echo "$name_en" ;
+echo "$surname_en" ;
+echo "$date_birth" ;
 
 try{
     $dbh = new PDO($dsn, $user, $password);
