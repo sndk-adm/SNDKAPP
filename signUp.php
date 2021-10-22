@@ -5,11 +5,14 @@
 <?php
 require_once('config.php');//config.phpの読み込み
 
+print('接続に成功しました。<br>');
+
 //データベースへ接続、テーブルがない場合は作成
 try {
   $pdo = new PDO(DSN, DB_USER, DB_PASS);
+  
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
-  // PDOExceptionの例外（エラー）を投げる。//
+  // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
@@ -21,19 +24,18 @@ try {
       surname_en varchar(20) not null,
       date_birth date not null,
       email char(30) unique,
-      password varchar(10) not null,
-      created timestamp not null default current_timestamp
-    )");}
+      password varchar(10) not null)");
+  }
 catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;}
 
-  $empcode = ($_POST['EMPCODE']);
-  $prefix_en = ($_POST['PREFIX_EN']);
-  $name_en = ($_POST['NAME']);
-  $surname_en = ($_POST['SURNAME']);
-  $date_birth = ($_POST['DATE_BIRTH']);
-  $email=($_POST['email']);
-  $passcode=($_POST['password']);
+$empcode = ($_POST['EMPCODE']);
+$prefix_en = ($_POST['PREFIX_EN']);
+$name_en = ($_POST['NAME']);
+$surname_en = ($_POST['SURNAME']);
+$date_birth = ($_POST['DATE_BIRTH']);
+$email=($_POST['email']);
+$passcode=($_POST['password']);
   
   echo "$empcode" ;
   echo '<br>';
@@ -72,8 +74,6 @@ catch (Exception $e) {
 // catch (\Exception $e) {
 //   echo '登録済みです。';}
   
-$pdo=null;
-
 ?>
 
 </body>
