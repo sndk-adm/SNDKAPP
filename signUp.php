@@ -35,21 +35,6 @@ catch (Exception $e) {
   $email=($_POST['email']);
   $passcode=($_POST['password']);
     
-    echo "$empcode" ;
-    echo '<br>';
-    echo "$prefix_en" ;
-    echo '<br>';
-    echo "$name_en" ;
-    echo '<br>';
-    echo "$surname_en" ;
-    echo '<br>';
-    echo "$date_birth" ;
-    echo '<br>';
-    echo "$email" ;
-    echo '<br>';
-    echo "$passcode" ;
-    echo '<br>';
-
    $sql = 'SELECT * FROM login_emp';
    $stmt = $dbh->query($sql);
    foreach ($stmt as $row) {
@@ -57,17 +42,17 @@ catch (Exception $e) {
     echo '<br>';
     }
 
-//emailデータ型の検証
-// if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-//   echo '入力された値が不正です。';
-//   return false;
-// }
-// //パスワードの正規表現
-// if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{4,100}+\z/i', $_POST['password'])) {
-//   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);}
-// else {
-//   echo 'パスワードは半角英数字をそれぞれ1文字以上含んだ4文字以上で設定してください。';
-//   return false;}
+emailデータ型の検証
+if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+  echo '入力された値が不正です。';
+  return false;
+}
+//パスワードの正規表現
+if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{4,100}+\z/i', $_POST['password'])) {
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);}
+else {
+  echo 'パスワードは半角英数字をそれぞれ1文字以上含んだ4文字以上で設定してください。';
+  return false;}
 
 // //登録処理
 // try {
