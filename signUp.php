@@ -3,7 +3,7 @@
 
 <body>
 <?php
-require_once('config.php');//config.phpの読み込み
+require('config.php');//config.phpの読み込み
 
 print('接続に成功しました。<br>');
 
@@ -52,22 +52,13 @@ $passcode=($_POST['password']);
   echo "$passcode" ;
   echo '<br>';
 
-  try{
-    $dbh = new PDO($dsn, $user, $password);
-
-    print('接続に成功しました。<br>');
-
-    $sql = 'SELECT * FROM login_emp';
-    $stmt = $dbh->query($sql);
+  $sql = 'SELECT * FROM login_emp';
+  $stmt = $dbh->query($sql);
     foreach ($stmt as $row) {
         echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
         echo '<br>';
         }
-    
-}catch (PDOException $e){
-    print('Error:'.$e->getMessage());
-    die();
-}
+ 
 
 //emailデータ型の検証
 // if (!$email = filter_char($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -91,6 +82,8 @@ $passcode=($_POST['password']);
 // catch (\Exception $e) {
 //   echo '登録済みです。';}
   
+$dbh = null;
+
 ?>
 
 </body>
