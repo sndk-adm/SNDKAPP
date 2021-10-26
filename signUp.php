@@ -25,14 +25,6 @@ try {  $dbh = new PDO($dsn, $user, $password,$options);
   }
 catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;}
-
-  $empcode = ($_POST['EMPCODE']);
-  $prefix_en = ($_POST['PREFIX_EN']);
-  $name_en = ($_POST['NAME']);
-  $surname_en = ($_POST['SURNAME']);
-  $email=($_POST['email']);
-  $password=($_POST['password']);
-    
  
 //emailデータ型の検証 
 if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
@@ -50,10 +42,23 @@ else {
 
 //登録処理
 try {
-  echo '登録準備';
+  $empcode = ($_POST['EMPCODE']);
+  $prefix_en = ($_POST['PREFIX_EN']);
+  $name_en = ($_POST['NAME']);
+  $surname_en = ($_POST['SURNAME']);
+  $email=($_POST['email']);
+  $password=($_POST['password']);
+
   $stmt = $dbh->prepare("insert into login_emp(empcode,prefix_en,name_en,surname_en,email,password) values_
-  (?,?,?,?,?,?)");
-  $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$email,$password]);
+  (:empcode,:prefix_en,:name_en,:surname_en,:email,:password)");
+
+  $stmt->bindParam(‘:empcode’, $empcode, PDO:: PARAM_STR);
+  $stmt->bindParam(‘:prefix_en’, $prefix_en, PDO:: PARAM_STR);
+  $stmt->bindParam(‘:name_en’, $name_en, PDO:: PARAM_STR);
+  $stmt->bindParam(‘:email’, $email, PDO:: PARAM_STR);
+  $stmt->bindParam(‘:password’, $password, PDO:: PARAM_STR);
+
+  $stmt->execute();
   echo '登録完了';
   }
   
