@@ -8,6 +8,15 @@ require('config.php');//config.phpの読み込み
 //データベースへ接続、テーブルがない場合は作成
 try {  $dbh = new PDO($dsn, $user, $password,$options);
 
+  print('接続に成功しました。<br>');
+
+    $sql = 'SELECT * FROM login_emp';
+    $stmt = $dbh->query($sql);
+    foreach ($stmt as $row) {
+        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
+        echo '<br>';
+        }
+        
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
   // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
