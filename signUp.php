@@ -47,20 +47,20 @@ else {
   echo 'パスワードは半角英数字を4文字以上で設定してください。';
   echo '<br>';
   echo '<br>';
-
   echo "<a href=\"https://sndk-adm.herokuapp.com/register.php\">Back to New Registration</a>";
-
   return false;}
 
 //登録処理
 try {
-  $stmt = $dbh->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) value(?, ?, ?, ?, ?, ?, ?)");
+  $stmt = $dbh->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) values(?, ?, ?, ?, ?, ?, ?)");
   $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
   echo '登録完了';
   }
   
 catch (\Exception $e) {
-  echo '登録済みです。';
+  echo '登録済みもしくは登録エラー。';
+  echo '<br>';
+  echo '<br>';
   echo "<a href=\"https://sndk-adm.herokuapp.com/register.php\">Back to New Registration</a>";
 }
   
@@ -69,7 +69,7 @@ $dbh = null;
 ?>
 <br>
 <br>
-<li><a href="register.php">Back to New Registration</a></li>
+<!-- <li><a href="register.php">Back to New Registration</a></li> -->
 
 </body>
 </html>
