@@ -59,7 +59,7 @@ try {
   $stmt->bindParam(':prefix_en',$prefix_en,PDO::PARAM_STR);
   $stmt->bindParam(':name_en',$name_en,PDO::PARAM_STR);
   $stmt->bindParam(':surname_en',$surname_en,PDO::PARAM_STR);
-  $stmt->bindParam(':date_birth',$date_birth);
+  $stmt->bindParam(':date_birth',$date_birth->format('yyyy-mm-dd'),PDO::PARAM_STR);
   $stmt->bindParam(':email',$email,PDO::PARAM_STR);
   $stmt->bindParam(':password',$password,PDO::PARAM_STR);
   $stmt->bindvalue(':del_flag','0');
