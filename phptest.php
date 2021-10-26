@@ -39,7 +39,7 @@ echo "$passcode" ;
 echo '<br>';
 
 try{
-    $dbh = new PDO($dsn, $user, $password);
+    $dbh = new PDO($dsn, $user, $password, $option);
 
     print('接続に成功しました。<br>');
 
