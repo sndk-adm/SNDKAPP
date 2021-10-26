@@ -74,7 +74,7 @@
       <label for="SURNAME">Surname (Eng) ：</label>
       <input type="text" name="SURNAME"size="20"style="margin-left: 10px;padding-left: 10px;font-size: 17px;">
       <br><br>
-      <label for="DATE_BIRTH">Birth day ：</label>
+      <label for="DATE_BIRTH">Birthday ：</label>
       <input type="date" name="DATE_BIRTH"style="margin-left: 10px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <label for="email">E-mail ：</label>

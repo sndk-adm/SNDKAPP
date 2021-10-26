@@ -6,7 +6,7 @@
 require_once('config.php');//config.phpの読み込み
 
 //データベースへ接続、テーブルがない場合は作成
-try {  $dbh = new PDO($dsn, $user, $password);
+try {  $dbh = new PDO($dsn, $user, $password,$options);
 
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
   // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
@@ -53,7 +53,15 @@ else {
 //登録処理
 try {
   $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) VALUES_
-  ($empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email,$password)');
+  (:empcode,:prefix_en,:name_en,:surname_en,:date_birth,:email,:password)');
+  $stmt->bindParam(':empcode',$empcode,PDO::PARAM_STR);
+  $stmt->bindParam(':prefix_en',$prefix_en,PDO::PARAM_STR);
+  $stmt->bindParam(':name_en',$name_en,PDO::PARAM_STR);
+  $stmt->bindParam(':surname_en',$surname_en,PDO::PARAM_STR);
+  $stmt->bindParam(':date_birth',$date_birth,PDO::PARAM_STR);
+  $stmt->bindParam(':email',$email,PDO::PARAM_STR);
+  $stmt->bindParam(':password',$password,PDO::PARAM_STR);
+
   $stmt->execute();
   echo '登録完了';
   }
