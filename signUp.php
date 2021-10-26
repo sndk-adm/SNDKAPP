@@ -50,6 +50,7 @@ else {
 
 //登録処理
 try {
+  echo '登録準備';
   $stmt = $dbh->prepare("insert into login_emp(empcode,prefix_en,name_en,surname_en,email,password) values_
   (?,?,?,?,?,?)");
   $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$email,$password]);
