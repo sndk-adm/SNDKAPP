@@ -19,7 +19,6 @@ try {  $dbh = new PDO($dsn, $user, $password,$options);
       prefix_en int not null,
       name_en varchar(20) not null,
       surname_en varchar(20) not null,
-      date_birth date not null,
       email char(30) unique,
       password varchar(10) not null)");
 
@@ -31,7 +30,6 @@ catch (Exception $e) {
   $prefix_en = ($_POST['PREFIX_EN']);
   $name_en = ($_POST['NAME']);
   $surname_en = ($_POST['SURNAME']);
-  $date_birth = ($_POST['DATE_BIRTH']);
   $email=($_POST['email']);
   $password=($_POST['password']);
     
@@ -52,19 +50,17 @@ else {
 
 //登録処理
 try {
-  $stmt = $dbh->prepare('INSERT INTO login_emp(id,empcode,prefix_en,name_en,surname_en,date_birth,email,password,del_flag) VALUES_
-  (:id,:empcode,:prefix_en,:name_en,:surname_en,:date_birth,:email,:password,:del_flag)');
+  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,password,del_flag) VALUES_
+  (:empcode,:prefix_en,:name_en,:surname_en,:email,:password,0)');
   
-  $stmt->bindvalue(':id',null);
+
   $stmt->bindParam(':empcode',$empcode,PDO::PARAM_STR);
   $stmt->bindParam(':prefix_en',$prefix_en,PDO::PARAM_STR);
   $stmt->bindParam(':name_en',$name_en,PDO::PARAM_STR);
   $stmt->bindParam(':surname_en',$surname_en,PDO::PARAM_STR);
-  $stmt->bindParam(':date_birth',$date_birth->format('yyyy-mm-dd'),PDO::PARAM_STR);
   $stmt->bindParam(':email',$email,PDO::PARAM_STR);
   $stmt->bindParam(':password',$password,PDO::PARAM_STR);
-  $stmt->bindvalue(':del_flag','0');
-
+  
   $stmt->execute();
   echo '登録完了';
   }
