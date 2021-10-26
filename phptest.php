@@ -41,8 +41,7 @@ try{
 
     print('接続に成功しました。<br>');
 
-  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,password) VALUES_
-  (:empcode,:prefix_en,:name_en,:surname_en,:email,:password)');
+  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,password) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:password)');
   $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $password]);
 
     $sql = 'SELECT * FROM login_emp';
