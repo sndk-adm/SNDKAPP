@@ -52,8 +52,9 @@ else {
 
 //登録処理
 try {
-  $stmt = $dbh->prepare("INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) values(?, ?, ?, ?, ?, ?, ?)");
-  $stmt->execute([$empcode,$prefix_en,$name_en,$surname_en,$date_birth,$email, $password]);
+  $SQL='insert into login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password) values(?, ?, ?, ?, ?, ?, ?)';
+  $stmt = $dbh->prepare($SQL);
+  $stmt->execute('empcode','prefix_en','name_en','surname_en','date_birth','email','password');
   echo '登録完了';
   }
   
