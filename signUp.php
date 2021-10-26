@@ -54,6 +54,7 @@ else {
 try {
   $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password,del_flag) VALUES_
   (:empcode,:prefix_en,:name_en,:surname_en,:date_birth,:email,:password,:del_flag)');
+  
   $stmt->bindParam(':empcode',$empcode,PDO::PARAM_STR);
   $stmt->bindParam(':prefix_en',$prefix_en,PDO::PARAM_STR);
   $stmt->bindParam(':name_en',$name_en,PDO::PARAM_STR);

@@ -61,7 +61,7 @@
       <div class="SUB_TX">Please fill in the item</div>
       <!-- 入力項目 -->
       <div class="FILL_TX">
-      <form action="phptest.php" method="post" name="regForm" onSubmit="return check();">
+      <form action="signUp.php" method="post" name="regForm" onSubmit="return check();">
       <label for="EMPCODE">Employee Code ：</label>
       <input type="text" name="EMPCODE" style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
@@ -75,7 +75,7 @@
       <input type="text" name="SURNAME"size="20"style="margin-left: 10px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <label for="DATE_BIRTH">Birthday ：</label>
-      <input type="date" name="DATE_BIRTH"style="margin-left: 10px;padding-left: 10px;font-size: 17px;">
+      <input type="date" name="DATE_BIRTH"style="margin-left: 11px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <label for="email">E-mail ：</label>
       <input type="email" name="email" size="60" style="margin-left: 28px;padding-left: 10px;font-size: 17px;">
