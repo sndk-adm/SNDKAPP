@@ -52,9 +52,10 @@ else {
 
 //登録処理
 try {
-  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,date_birth,email,password,del_flag) VALUES_
-  (:empcode,:prefix_en,:name_en,:surname_en,:date_birth,:email,:password,:del_flag)');
+  $stmt = $dbh->prepare('INSERT INTO login_emp(id,empcode,prefix_en,name_en,surname_en,date_birth,email,password,del_flag) VALUES_
+  (:id,:empcode,:prefix_en,:name_en,:surname_en,:date_birth,:email,:password,:del_flag)');
   
+  $stmt->bindvalue(':id',null);
   $stmt->bindParam(':empcode',$empcode,PDO::PARAM_STR);
   $stmt->bindParam(':prefix_en',$prefix_en,PDO::PARAM_STR);
   $stmt->bindParam(':name_en',$name_en,PDO::PARAM_STR);
