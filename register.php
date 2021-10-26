@@ -13,7 +13,6 @@
     let PREFIX_EN = document.regForm.PREFIX_EN.value;
     var NAME = document.regForm.NAME.value;
     var SURNAME = document.regForm.SURNAME.value;
-    let DATE_BIRTH = document.regForm.DATE_BIRTH.value;
     var email = document.regForm.email.value;
     var password = document.regForm.password.value;
 
@@ -63,22 +62,22 @@
       <div class="FILL_TX">
       <form action="phptest.php" method="post" name="regForm" onSubmit="return check();">
       <label for="EMPCODE">Employee Code ：</label>
-      <input type="text" name="EMPCODE" style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
+      <input type="text" name="EMPCODE" maxlength="10" style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <input type="radio" name="PREFIX_EN" value="0">Mr.
       <input type="radio" name="PREFIX_EN" value="1">Miss.
       <input type="radio" name="PREFIX_EN" value="2">Mrs.
       <br><br>
       <label for="NAME">Name (Eng) ：</label>
-      <input type="text" name="NAME"size="20"style="margin:0 10px 0 10px;padding-left: 10px;font-size: 17px;">
+      <input type="text" name="NAME"  maxlength="20" size="16" style="margin:0 10px 0 10px;padding-left: 10px;font-size: 17px;">
       <label for="SURNAME">Surname (Eng) ：</label>
-      <input type="text" name="SURNAME"size="20"style="margin-left: 10px;padding-left: 10px;font-size: 17px;">
+      <input type="text" name="SURNAME"  maxlength="20" size="16"style="margin-left: 10px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <label for="email">E-mail ：</label>
-      <input type="email" name="email" size="60" style="margin-left: 28px;padding-left: 10px;font-size: 17px;">
+      <input type="email" name="email"   maxlength="30" size="60" style="margin-left: 28px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <label for="password">password ：</label>
-      <input type="text" name="password"size="20"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
+      <input type="text" name="password"   maxlength="10" size="20"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <button type="submit"style="font-size: 18px;width : 180px;height : 40px;margin-left:110px;">Sign Up</button>
       </form>
