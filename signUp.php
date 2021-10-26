@@ -3,7 +3,7 @@
 
 <body>
 <?php
-require_once('config.php');//config.phpの読み込み
+require('config.php');//config.phpの読み込み
 
 //データベースへ接続、テーブルがない場合は作成
 try {  $dbh = new PDO($dsn, $user, $password,$options);
@@ -13,14 +13,14 @@ try {  $dbh = new PDO($dsn, $user, $password,$options);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
-  $dbh->exec("create table if not exists login_emp(
-      id serial primary key,
-      empcode char(10) unique,
-      prefix_en int not null,
-      name_en varchar(20) not null,
-      surname_en varchar(20) not null,
-      email char(30) unique,
-      password varchar(10) not null)");
+  // $dbh->exec("create table if not exists login_emp(
+  //     id serial primary key,
+  //     empcode char(10) unique,
+  //     prefix_en int not null,
+  //     name_en varchar(20) not null,
+  //     surname_en varchar(20) not null,
+  //     email char(30) unique,
+  //     password varchar(10) not null)");
 
   }
 catch (Exception $e) {
