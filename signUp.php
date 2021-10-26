@@ -55,6 +55,7 @@ try {
   $stmt->bindParam(':empcode', $empcode, PDO:: PARAM_STR);
   $stmt->bindParam(':prefix_en', $prefix_en, PDO:: PARAM_STR);
   $stmt->bindParam(':name_en', $name_en, PDO:: PARAM_STR);
+  $stmt->bindParam(':surname_en', $surname_en, PDO:: PARAM_STR);
   $stmt->bindParam(':email', $email, PDO:: PARAM_STR);
   $stmt->bindParam(':password', $password, PDO:: PARAM_STR);
 
