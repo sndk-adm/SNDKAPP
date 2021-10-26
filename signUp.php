@@ -49,17 +49,31 @@ try {
   $email=($_POST['email']);
   $password=($_POST['password']);
 
-  $stmt = $dbh->prepare("insert into login_emp(empcode,prefix_en,name_en,surname_en,email,password) values_
-  (:empcode,:prefix_en,:name_en,:surname_en,:email,:password)");
+echo "$empcode" ;
+echo '<br>';
+echo "$prefix_en" ;
+echo '<br>';
+echo "$name_en" ;
+echo '<br>';
+echo "$surname_en" ;
+echo '<br>';
+echo "$email" ;
+echo '<br>';
+echo "$passcode" ;
+echo '<br>';
 
-  $stmt->bindParam(':empcode', $empcode, PDO:: PARAM_STR);
-  $stmt->bindParam(':prefix_en', $prefix_en, PDO:: PARAM_STR);
-  $stmt->bindParam(':name_en', $name_en, PDO:: PARAM_STR);
-  $stmt->bindParam(':surname_en', $surname_en, PDO:: PARAM_STR);
-  $stmt->bindParam(':email', $email, PDO:: PARAM_STR);
-  $stmt->bindParam(':password', $password, PDO:: PARAM_STR);
+  // $stmt = $dbh->prepare("insert into login_emp(empcode,prefix_en,name_en,surname_en,email,password) values_
+  // (:empcode,:prefix_en,:name_en,:surname_en,:email,:password)");
 
-  $stmt->execute();
+  // $stmt->bindParam(':empcode', $empcode, PDO:: PARAM_STR);
+  // $stmt->bindParam(':prefix_en', $prefix_en, PDO:: PARAM_STR);
+  // $stmt->bindParam(':name_en', $name_en, PDO:: PARAM_STR);
+  // $stmt->bindParam(':surname_en', $surname_en, PDO:: PARAM_STR);
+  // $stmt->bindParam(':email', $email, PDO:: PARAM_STR);
+  // $stmt->bindParam(':password', $password, PDO:: PARAM_STR);
+
+  // $stmt->execute();
+
   echo '登録完了';
   }
   
