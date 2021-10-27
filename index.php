@@ -2,7 +2,7 @@
 
   //session_start();
   //ログイン済みの場合
-  if (isset($_SESSION['email'])) {
+  if (!isset($_SESSION['email'])) {
   echo 'ようこそ' .($_SESSION['email']) . 'さん';}
   else {
   echo "<a href='/logout.php'>ログアウトはこちら</a>";
