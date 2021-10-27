@@ -40,13 +40,13 @@
       }
 
       //パスワード確認
-      if (password_verify($login_pass, $row['login_pass'])) {
+      if (password_verify("$login_pass", $row['login_pass'])) {
         echo '<br>';
         echo $row['name_en']. 'で';
         echo 'ログインしました';
       } 
       else {
-      echo $login_pass;
+      echo "$login_pass";
       echo '<br>';
       echo $row['login_pass']; 
       echo '<br>';
