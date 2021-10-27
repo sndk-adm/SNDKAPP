@@ -65,7 +65,7 @@ echo '<br>';
   $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $login_pass]);
 
   echo '登録完了';
-  }
+}
   
 catch (\Exception $e) {
   echo '登録済みもしくは登録エラー。';
