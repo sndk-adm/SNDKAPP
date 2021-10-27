@@ -31,6 +31,8 @@
     </table>
     
     <?php
+    echo $_session[name_en];
+    echo '<br>';
     echo '入力内容の確認';
     ?>
     </div>
