@@ -46,6 +46,8 @@
         echo 'ログインしました';
       } 
       else {
+      echo $row['login_pass']; 
+      echo '<br>';
       echo 'パスワードが間違っています。';
       return false;
       }
