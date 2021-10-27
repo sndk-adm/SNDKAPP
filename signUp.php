@@ -7,30 +7,20 @@ require('config.php');//config.phpの読み込み
 
 //データベースへ接続、テーブルがない場合は作成
 try {  $dbh = new PDO($dsn, $user, $password,$options);
-
-  print('接続に成功しました。<br>');
-
-    $sql = 'SELECT * FROM login_emp';
-    $stmt = $dbh->query($sql);
-    foreach ($stmt as $row) {
-        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
-        echo '<br>';
-        }
         
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
   // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
-  // $dbh->exec("create table if not exists login_emp(
-  //     id serial primary key,
-  //     empcode char(10) unique,
-  //     prefix_en int not null,
-  //     name_en varchar(20) not null,
-  //     surname_en varchar(20) not null,
-  //     email char(30) unique,
-  //     password varchar(10) not null)");
-
+  $dbh->exec("create table if not exists login_emp(
+      id serial primary key,
+      empcode char(10) unique,
+      prefix_en int not null,
+      name_en varchar(20) not null,
+      surname_en varchar(20) not null,
+      email char(30) unique,
+      login_pass text not null)");
   }
 catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;}
@@ -41,7 +31,7 @@ if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
   return false;  }
 
 //パスワードの正規表現
-if (preg_match('/^[a-z0-9_]{4,10}$/i', $password)) {}
+if (preg_match('/^[a-z0-9_]{4,10}$/i', $login_pass)) {}
 else {
   echo 'パスワードは半角英数字を4文字以上で設定してください。';
   echo '<br>';
@@ -56,7 +46,7 @@ try {
   $name_en = ($_POST['NAME']);
   $surname_en = ($_POST['SURNAME']);
   $email=($_POST['email']);
-  $password=($_POST['password']);
+  $login_pass=($_POST['login_pass']);
 
 echo "$empcode" ;
 echo '<br>';
@@ -68,20 +58,11 @@ echo "$surname_en" ;
 echo '<br>';
 echo "$email" ;
 echo '<br>';
-echo "$passcode" ;
+echo "$login_pass" ;
 echo '<br>';
 
-  $stmt = $dbh->prepare("insert into login_emp(empcode,prefix_en,name_en,surname_en,email,password) values_
-  (:empcode,:prefix_en,:name_en,:surname_en,:email,:password)");
-
-  $stmt->bindParam(':empcode', $empcode, PDO:: PARAM_STR);
-  $stmt->bindParam(':prefix_en', $prefix_en, PDO:: PARAM_STR);
-  $stmt->bindParam(':name_en', $name_en, PDO:: PARAM_STR);
-  $stmt->bindParam(':surname_en', $surname_en, PDO:: PARAM_STR);
-  $stmt->bindParam(':email', $email, PDO:: PARAM_STR);
-  $stmt->bindParam(':password', $password, PDO:: PARAM_STR);
-
-  $stmt->execute();
+  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,login_pass) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:login_pass)');
+  $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $login_pass]);
 
   echo '登録完了';
   }
