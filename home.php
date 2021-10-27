@@ -32,7 +32,9 @@
     
     <?php
     session_start();
-    echo $_session[name_en];
+    echo $_session['name_en'];
+    echo '<br>';
+    echo $_session['email'];
     echo '<br>';
     echo '入力内容の確認';
     ?>
