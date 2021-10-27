@@ -43,10 +43,14 @@
 
       //パスワード確認
       if ("$login_pass" == $row['login_pass']) {
+
         $_session['name_en']=$row['name_en'];
         $_session['email']=$row['email'];
         $_session['login_pass']=$row['login_pass'];
-        header('Location: https://sndk-adm.herokuapp.com/home.php');
+        echo $_session['name_en'];
+        echo $_session['email'];
+        
+        //header('Location: https://sndk-adm.herokuapp.com/home.php');
       } 
       
       else {
