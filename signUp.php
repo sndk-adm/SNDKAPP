@@ -3,6 +3,13 @@
 
 <body>
 <?php
+function convert_enc($str){
+  $from_enc = 'EUC_JP';
+  $to_enc = 'SJIS';
+
+  return mb_convert_encoding($str, $to_enc, $from_enc);
+  }
+  
 require('config.php');//config.phpの読み込み
 
 //データベースへ接続、テーブルがない場合は作成
