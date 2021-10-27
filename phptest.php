@@ -19,9 +19,8 @@ $empcode = ($_POST['EMPCODE']);
 $prefix_en = ($_POST['PREFIX_EN']);
 $name_en = ($_POST['NAME']);
 $surname_en = ($_POST['SURNAME']);
-$date_birth = ($_POST['DATE_BIRTH']);
 $email=($_POST['email']);
-$passcode=($_POST['password']);
+$login_pass=($_POST['login_pass']);
 
 echo "$empcode" ;
 echo '<br>';
@@ -33,7 +32,7 @@ echo "$surname_en" ;
 echo '<br>';
 echo "$email" ;
 echo '<br>';
-echo "$passcode" ;
+echo "$login_pass" ;
 echo '<br>';
 
 try{
@@ -41,13 +40,13 @@ try{
 
     print('接続に成功しました。<br>');
 
-  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,password) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:password)');
-  $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $password]);
+  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,login_pass) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:login_pass)');
+  $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $login_pass]);
 
     $sql = 'SELECT * FROM login_emp';
     $stmt = $dbh->query($sql);
     foreach ($stmt as $row) {
-        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'];
+        echo $row['id'].'：'.$row['email'].'：'.$row['name_en'].'：'.$row['surname_en'].'：'.$row['login_pass'];
         echo '<br>';
         }
     
