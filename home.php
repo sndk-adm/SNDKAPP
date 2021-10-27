@@ -10,9 +10,9 @@
     <!-- ヘッダー開始 -->
     <ul id="nav">
       <li><a href="home.php">HOME</a></li>
-      <li><a href="home.php">USER SETING</a></li>
+      <li><a href="home.php">USER SETTING</a></li>
       <li><a href="index.php">APPLICATION</a></li>
-      <li><a href="index.php">REFERENCE</a></li>
+      <li><a href="index.php">ADMIN</a></li>
     </ul>
     <h1 id=""></h1>
     <!-- ヘッダー終了 -->

@@ -16,7 +16,6 @@ function convert_enc($str){
   $email=($_POST['email']);
   $login_pass=($_POST['login_pass']);
 
-//require('config.php');//config.phpの読み込み
 $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
 $user = 'hhmxfllafjsciw';
 $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
@@ -27,7 +26,7 @@ try {  $dbh = new PDO($dsn, $user, $password);
   // PDO::ATTR_ERRMODE属性でPDO::ERRMODE_EXCEPTIONの値を設定することでエラーが発生したときに、//
   // PDOExceptionの例外（エラー）を投げる。説明 https://w.atwiki.jp/nicepaper/pages/151.html//
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo 'データベースに接続しました。';
+  
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
   $dbh->exec("create table if not exists login_emp(
       id serial primary key,
@@ -48,7 +47,7 @@ if (filter_var($email,FILTER_VALIDATE_EMAIL) === false){
   echo 'メールアドレスが不正です。';
   return false;  }
 
-//パスワードの正規表現
+//パスワード正規表現の検証
 if (preg_match('/^[a-z0-9_]{4,10}$/i', $login_pass)) {}
 else {
   echo 'パスワードは半角英数字を4文字以上で設定してください。';
@@ -61,8 +60,10 @@ else {
 try {
   $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,login_pass) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:login_pass)');
   $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $login_pass]);
-
+  echo '<br>';
   echo '登録完了';
+  echo '<br>';
+  echo "<a href=\"https://sndk-adm.herokuapp.com/index.php\">Back to login page</a>";
 }
   
 catch (\Exception $e) {

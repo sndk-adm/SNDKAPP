@@ -36,10 +36,10 @@
       <form  action="login.php" method="post">
 
       <label for="email">E-mail</label>
-      <input type="email" name="email"style="margin-left: 28px;padding-left: 10px;font-size: 17px;">
+      <input type="email" name="email"style="margin-left: 30px;padding-left: 10px;font-size: 17px;">
       <br><br>
-      <label for="password">Password</label>
-      <input type="password" name="password"style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
+      <label for="login_pass">Password</label>
+      <input type="text" name="login_pass"style="margin-left: 7px;padding-left: 10px;font-size: 17px;">
       <br><br>
       <button type="submit" style="font-size: 17px;width : 170px;height : 38px;margin-left: 86px;">Sign In</button>
       </form> 
