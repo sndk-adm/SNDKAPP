@@ -29,14 +29,14 @@ try {  $dbh = new PDO($dsn, $user, $password);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo 'データベースに接続しました。';
   //例外処理 作成済みのテーブルを作ろうとするエラーを防ぐ。
-  // $dbh->exec("create table if not exists login_emp(
-  //     id serial primary key,
-  //     empcode char(10) unique,
-  //     prefix_en int not null,
-  //     name_en varchar(20) not null,
-  //     surname_en varchar(20) not null,
-  //     email char(30) unique,
-  //     login_pass text not null)");
+  $dbh->exec("create table if not exists login_emp(
+      id serial primary key,
+      empcode char(10) unique,
+      prefix_en int not null,
+      name_en varchar(20) not null,
+      surname_en varchar(20) not null,
+      email char(30) unique,
+      login_pass text not null)");
   }
 catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;}
@@ -58,19 +58,19 @@ else {
   return false;}
 
 //登録処理
-// try {
-//   $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,login_pass) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:login_pass)');
-//   $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $login_pass]);
+try {
+  $stmt = $dbh->prepare('INSERT INTO login_emp(empcode,prefix_en,name_en,surname_en,email,login_pass) VALUES(:empcode,:prefix_en,:name_en,:surname_en,:email,:login_pass)');
+  $stmt->execute([$empcode, $prefix_en, $name_en, $surname_en, $email, $login_pass]);
 
-//   echo '登録完了';
-// }
+  echo '登録完了';
+}
   
-// catch (\Exception $e) {
-//   echo '登録済みもしくは登録エラー。';
-//   echo '<br>';
-//   echo '<br>';
-//   echo "<a href=\"https://sndk-adm.herokuapp.com/register.php\">Back to New Registration</a>";
-// }
+catch (\Exception $e) {
+  echo '登録済みもしくは登録エラー。';
+  echo '<br>';
+  echo '<br>';
+  echo "<a href=\"https://sndk-adm.herokuapp.com/register.php\">Back to New Registration</a>";
+}
   
 $dbh = null;
 
