@@ -1,12 +1,11 @@
 <?php
-
-  //session_start();
+  session_start();
   //ログイン済みの場合
-  if (!isset($_SESSION['email'])) {
-  echo 'ようこそ' .($_SESSION['email']) . 'さん';}
+  if (!isset($_SESSION['email'])) { }
   else {
-  echo "<a href='/logout.php'>ログアウトはこちら</a>";
-  //exit;
+    echo 'ようこそ' .($_SESSION['email']) . 'さん';
+    echo "<a href='/logout.php'>ログアウトはこちら</a>";
+  exit;
   }
 ?>
 
