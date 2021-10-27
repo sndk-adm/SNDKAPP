@@ -8,7 +8,14 @@ function convert_enc($str){
   $to_enc = 'SJIS';
   return mb_convert_encoding($str, $to_enc, $from_enc);
   }
-  
+
+  $empcode = ($_POST['EMPCODE']);
+  $prefix_en = ($_POST['PREFIX_EN']);
+  $name_en = ($_POST['NAME']);
+  $surname_en = ($_POST['SURNAME']);
+  $email=($_POST['email']);
+  $login_pass=($_POST['login_pass']);
+
 //require('config.php');//config.phpの読み込み
 $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
 $user = 'hhmxfllafjsciw';
