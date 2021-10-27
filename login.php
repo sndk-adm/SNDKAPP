@@ -1,5 +1,7 @@
     
     <?php
+    session_start();
+
       //データベース接続情報
       $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
       $user = 'hhmxfllafjsciw';
@@ -41,10 +43,11 @@
 
       //パスワード確認
       if ("$login_pass" == $row['login_pass']) {
-        echo '<br>';
-        echo $row['name_en']. 'で';
-        echo 'ログインしました';
+        $_session['email']="$email";
+        $_session['login_pass']="$login_pass";
+        header('Location: https://sndk-adm.herokuapp.com/home.php');
       } 
+      
       else {
       echo '<br>';
       echo 'パスワードが間違っています。';
