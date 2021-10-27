@@ -32,6 +32,8 @@
     
     <?php
     session_start();
+    echo 'ここにセッション情報';
+    echo '<br>';
     echo $_session['name_en'];
     echo '<br>';
     echo $_session['email'];
