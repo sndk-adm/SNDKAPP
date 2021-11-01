@@ -31,11 +31,11 @@
     </table>
     
     <?php
-    ini_set('session.save_handler','memcached');
-    ini_set('session.session_save_path','PERSISTENT=pool '.getenv('mc2.dev.ec2.memcachier.com'));//Server Name
-    ini_set('memcached.sess_binary',1);
-    ini_set('memcached.sess_sasl_username',getenv('BE44DC'));
-    ini_set('memcached.sess_sasl_password',getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
+ ini_set('session.save_handler','2C42F0');
+ ini_set('session.session_save_path','PERSISTENT=pool '.getenv('mc2.dev.ec2.memcachier.com'));//Server Name
+ ini_set('memcached.sess_binary',1);
+ ini_set('memcached.sess_sasl_username',getenv('BE44DC'));
+ ini_set('memcached.sess_sasl_password',getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
     
     session_start();
     echo 'ここにセッション情報';
