@@ -1,0 +1,7 @@
+{
+"require": {
+"ext-bcmath": "*",
+"ext-memcached": "*",
+"ext-xsl": "*"
+}
+}
