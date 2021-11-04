@@ -1,8 +1,15 @@
     
     <?php
+
     ini_set('session.save_handler','memcached');
     ini_set('session.session_save_path','PERSISTENT=pool '.getenv('mc2.dev.ec2.memcachier.com'));//Server Name
-    ini_set('memcached.sess_binary',1);
+    if(version_compare(phpversion('memcached'), '3', '>=')) {
+      ini_set('memcached.sess_persistent', 1);
+      ini_set('memcached.sess_binary_protocol', 1);
+      } else {
+      ini_set('session.save_path', 'PERSISTENT=myapp_session ' . ini_get('session.save_path'));
+      ini_set('memcached.sess_binary', 1);
+      }
     ini_set('memcached.sess_sasl_username',getenv('BE44DC'));
     ini_set('memcached.sess_sasl_password',getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
 
@@ -19,6 +26,14 @@
     // ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
 
     session_start();
+
+    if (!isset($_SESSION['count'])) {
+      $_SESSION['count'] = 0;
+  }
+  $_SESSION['count']++;
+  
+  echo "Hello #" . $_SESSION['count'];
+
 
       //データベース接続情報
       $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
@@ -65,8 +80,9 @@
         $_session['email']=$row['email'];
         $_session['login_pass']=$row['login_pass'];
      
-        header('Location: https://sndk-adm.herokuapp.com/home.php');
-      } 
+      //   header('Location: https://sndk-adm.herokuapp.com/home.php');
+      // 
+    } 
       
       else {
       echo '<br>';
