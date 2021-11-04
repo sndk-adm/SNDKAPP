@@ -25,14 +25,20 @@
     // ini_set('memcached.sess_sasl_username', getenv('BE44DC'));
     // ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
 
+    // セッションの有効期限を5分に設定
+    session_set_cookie_params(60 * 5);
+
     session_start();
 
     if (!isset($_SESSION['count'])) {
-      $_SESSION['count'] = 0;
+      // キー'count'が登録されていなければ、1を設定
+      $_SESSION['count'] = 1;
+  } else {
+      //  キー'count'が登録されていれば、その値をインクリメント
+      $_SESSION['count']++;
   }
-  $_SESSION['count']++;
-  
-  echo "Hello #" . $_SESSION['count'];
+   
+  echo $_SESSION['count']."回目の訪問です。";
 
 
       //データベース接続情報
