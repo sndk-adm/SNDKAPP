@@ -35,7 +35,7 @@
       $_SESSION['count'] = 1;
   } else {
       //  キー'count'が登録されていれば、その値をインクリメント
-      $_SESSION['count']++;
+      $_SESSION['count']= 2;
   }
    
   echo $_SESSION['count']."回目の訪問です。";
