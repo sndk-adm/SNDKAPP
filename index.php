@@ -1,5 +1,7 @@
 <?php
 
+phpinfo()
+
   session_start();
   //ログイン済みの場合
   if (!isset($_SESSION['email'])) { }
