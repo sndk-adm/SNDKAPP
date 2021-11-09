@@ -1,6 +1,6 @@
 <?php
 
-phpinfo()
+phpinfo();
 
   session_start();
   //ログイン済みの場合
