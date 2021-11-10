@@ -2,7 +2,7 @@
     <?php
 
     ini_set('session.save_handler','memcached');
-    ini_set('session.session_save_path','PERSISTENT=pool '.getenv('mc2.dev.ec2.memcachier.com:11211'));//Server Name
+    ini_set('session.session_save_path','PERSISTENT=pool '.getenv('mc2.dev.ec2.memcachier.com'));//Server Name
     if(version_compare(phpversion('memcached'), '3', '>=')) {
       ini_set('memcached.sess_persistent', 1);
       ini_set('memcached.sess_binary_protocol', 1);
