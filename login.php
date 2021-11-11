@@ -63,7 +63,7 @@
         $_session['email']=$row['email'];
         $_session['login_pass']=$row['login_pass'];
      
-      //   header('Location: https://sndk-adm.herokuapp.com/home.php');
+      header('Location: https://sndk-adm.herokuapp.com/home.php');
       // 
     } 
       
@@ -72,6 +72,5 @@
       echo 'パスワードが間違っています。';
       return false;
       }
-      echo $_session['name_en'];
-      echo $_session['email'];
+
     ?>
