@@ -3,15 +3,14 @@
     session_start();
     echo "Hello #" . $_SESSION['count'];
     echo '<br>';
-   //index.phpで入力された値
-      $email=($_POST['email']);
-      $login_pass=($_POST['login_pass']);
+    //index.phpで入力された値
+    $email=($_POST['email']);
+    $login_pass=($_POST['login_pass']);
+    echo "Postされた情報" . $_SESSION['count'];
+    echo '<br>';
     echo $email;
     echo '<br>';
     echo $login_pass;
-    echo '<br>';
-      $_session['email']=$email;
-    echo $_session['email'];
 
     // // セッションの有効期限を5分に設定
     // // session_set_cookie_params(60 * 5);
@@ -54,7 +53,7 @@
         $_session['name_en_db']=$row['name_en'];
         $_session['email_db']=$row['email'];
         $_session['login_pass_db']=$row['login_pass'];
-        echo "--データベース情報--";
+        echo "--データベース情報--セッション代入";
         echo '<br>';
         echo $_session['name_en_db'];
         echo '<br>';
