@@ -1,7 +1,6 @@
 {
     "require": {
-           "php":"^7.3.0",
-           "ext-memcache": "*"
+              "ext-memcache": "*"
     }
 
   }
