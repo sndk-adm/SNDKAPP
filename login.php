@@ -1,24 +1,27 @@
     
     <?php
     session_start();
-    echo "Hello #" . $_SESSION['count']
+    echo "Hello #" . $_SESSION['count'];
+    echo '<br>';
+   //index.phpで入力された値
+      $email=($_POST['email']);
+      $login_pass=($_POST['login_pass']);
+    echo $email;
+    echo '<br>';
+    echo $login_pass;
+    echo '<br>';
+      $_session['email']=$email;
+    echo $_session['email'];
 
     // // セッションの有効期限を5分に設定
     // // session_set_cookie_params(60 * 5);
-    // session_start();
-
+   
     // //データベース接続情報
     //   $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
     //   $user = 'hhmxfllafjsciw';
     //   $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
 
-    //   //index.phpで入力された値
-    //   $email=($_POST['email']);
-    //   $login_pass=($_POST['login_pass']);
- 
-    //   $_session['email']=$email;
-    //   echo $_session['email'];
-           
+             
     //   //emailデータ型の検証 
     //   if (filter_var($email,FILTER_VALIDATE_EMAIL) === false) {
     //   echo $email;
