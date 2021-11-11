@@ -1,16 +1,7 @@
     
     <?php
- 
- ini_set('session.save_handler', 'memcached');
- ini_set('session.save_path', getenv('mc2.dev.ec2.memcachier.com'));
- ini_set('memcached.sess_persistent',1);
- ini_set('memcached.sess_binary_protocol',1);
- ini_set('memcached.sess_sasl_username', getenv('BE44DC'));
- ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
-
-    // セッションの有効期限を5分に設定
+     // セッションの有効期限を5分に設定
     session_set_cookie_params(60 * 5);
-
     session_start();
 
     //データベース接続情報
