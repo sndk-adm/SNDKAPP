@@ -13,36 +13,12 @@
     ini_set('memcached.sess_sasl_username', getenv('BE44DC'));
     ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
 
-
-    // ini_set('session.save_handler', '2C42F0');
-    // ini_set('session.save_path', getenv('mc2.dev.ec2.memcachier.com'));
-    // if(version_compare(phpversion('memcached'), '3', '>=')) {
-    //     ini_set('memcached.sess_persistent', 1);
-    //     ini_set('memcached.sess_binary_protocol', 1);
-    // } else {
-    //     ini_set('session.save_path', 'PERSISTENT=myapp_session ' . ini_get('session.save_path'));
-    //     ini_set('memcached.sess_binary', 1);
-    // }
-    // ini_set('memcached.sess_sasl_username', getenv('BE44DC'));
-    // ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
-
     // セッションの有効期限を5分に設定
     session_set_cookie_params(60 * 5);
 
     session_start();
 
-    if (!isset($_SESSION['count'])) {
-      // キー'count'が登録されていなければ、1を設定
-      $_SESSION['count'] = 1;
-  } else {
-      //  キー'count'が登録されていれば、その値をインクリメント
-      $_SESSION['count']= 2;
-  }
-   
-  echo $_SESSION['count']."回目の訪問です。";
-
-
-      //データベース接続情報
+    //データベース接続情報
       $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
       $user = 'hhmxfllafjsciw';
       $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
@@ -96,4 +72,6 @@
       echo 'パスワードが間違っています。';
       return false;
       }
+      echo $_session['name_en'];
+      echo $_session['email'];
     ?>
