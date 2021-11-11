@@ -13,7 +13,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "memcached": "*"
+        "ext-memcached": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
