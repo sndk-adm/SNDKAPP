@@ -6,7 +6,7 @@
     //index.phpで入力された値
     $email=($_POST['email']);
     $login_pass=($_POST['login_pass']);
-    echo "Postされた情報" . $_SESSION['count'];
+    echo "Postされた情報";
     echo '<br>';
     echo $email;
     echo '<br>';
