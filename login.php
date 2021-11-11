@@ -54,6 +54,8 @@
         $_session['name_en_db']=$row['name_en'];
         $_session['email_db']=$row['email'];
         $_session['login_pass_db']=$row['login_pass'];
+        echo "--データベース情報--";
+        echo '<br>';
         echo $_session['name_en_db'];
         echo '<br>';
         echo $_session['email_db'];
