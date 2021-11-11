@@ -1,6 +1,6 @@
     
     <?php
-
+    session_start();
     echo "Hello #" . $_SESSION['count']
 
     // // セッションの有効期限を5分に設定
