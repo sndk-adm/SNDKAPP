@@ -1,8 +1,6 @@
 
 <?php
 
-// any ini_set() for session configuration goes here when not using .user.ini
-
 session_start();
 if (!isset($_SESSION['count'])) {
     $_SESSION['count'] = 0;
@@ -11,25 +9,21 @@ $_SESSION['count']++;
 
 echo "Hello #" . $_SESSION['count'];
 
-?>
+// ini_set('session.save_handler', 'memcached');
+// ini_set('session.save_path', getenv('mc2.dev.ec2.memcachier.com'));
+// ini_set('memcached.sess_persistent',1);
+// ini_set('memcached.sess_binary_protocol',1);
+// ini_set('memcached.sess_sasl_username', getenv('BE44DC'));
+// ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
 
-<!-- <?php
-
-ini_set('session.save_handler', 'memcached');
-ini_set('session.save_path', getenv('mc2.dev.ec2.memcachier.com'));
-ini_set('memcached.sess_persistent',1);
-ini_set('memcached.sess_binary_protocol',1);
-ini_set('memcached.sess_sasl_username', getenv('BE44DC'));
-ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56'));
-
-  session_start();
-  //ログイン済みの場合
-  if (!isset($_SESSION['email'])) { }
-  else {
-    echo 'ようこそ' .($_SESSION['email']) . 'さん';
-    echo "<a href='/logout.php'>ログアウトはこちら</a>";
-  exit;
-  }
+//   session_start();
+//   //ログイン済みの場合
+//   if (!isset($_SESSION['email'])) { }
+//   else {
+//     echo 'ようこそ' .($_SESSION['email']) . 'さん';
+//     echo "<a href='/logout.php'>ログアウトはこちら</a>";
+//   exit;
+//   }
 ?>
 
 <!DOCTYPE html>
@@ -78,4 +72,4 @@ ini_set('memcached.sess_sasl_password', getenv('5C858CEBEA8FC0CAF2B1C2CD99E98A56
     <!-- フッター終了 -->
   
 </body>
-</html> -->
+</html>
