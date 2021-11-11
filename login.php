@@ -1,7 +1,7 @@
     
     <?php
 
-    "Hello #" . $_SESSION['count']
+    echo "Hello #" . $_SESSION['count']
 
     // // セッションの有効期限を5分に設定
     // // session_set_cookie_params(60 * 5);
