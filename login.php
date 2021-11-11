@@ -1,7 +1,7 @@
     
     <?php
-     // セッションの有効期限を5分に設定
-    session_set_cookie_params(60 * 5);
+    // セッションの有効期限を5分に設定
+    // session_set_cookie_params(60 * 5);
     session_start();
 
     //データベース接続情報
@@ -15,9 +15,7 @@
  
       $_session['email']=$email;
       echo $_session['email'];
-      
-      //session_start();　//ユーザーデータを一時的にサーバーへ格納
-      
+           
       //emailデータ型の検証 
       if (filter_var($email,FILTER_VALIDATE_EMAIL) === false) {
       echo $email;
@@ -52,7 +50,7 @@
         // $_session['email']=$row['email'];
         // $_session['login_pass']=$row['login_pass'];
      
-      header('Location: https://sndk-adm.herokuapp.com/home.php');
+      // header('Location: https://sndk-adm.herokuapp.com/home.php');
       // 
     } 
       
