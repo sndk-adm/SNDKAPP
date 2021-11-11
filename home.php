@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    echo 'ここにセッション情報';
+    echo '<br>';
+    echo $_session['name_en'];
+    echo '<br>';
+    echo $_session['email'];
+    echo '<br>';
+    echo '入力内容の確認';
+    ?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -29,18 +40,7 @@
       <td> Taro </td>
     </tr>
     </table>
-    
-    <?php
-    session_start();
-    echo 'ここにセッション情報';
-    echo '<br>';
-    echo $_session['name_en'];
-    echo '<br>';
-    echo $_session['email'];
-    echo '<br>';
-    echo '入力内容の確認';
-    ?>
-
+        
     </div>
     <!-- メイン終了 -->
     <!-- フッター開始 -->
