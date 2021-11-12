@@ -26,6 +26,7 @@ if (!isset($_SESSION['email_db'])) {
       <li><a href="home.php">USER SETTING</a></li>
       <li><a href="index.php">APPLICATION</a></li>
       <li><a href="index.php">ADMIN</a></li>
+      <li><a href="logout.php">LOGOUT</a></li>
     </ul>
 
     <?php
@@ -50,13 +51,12 @@ if (!isset($_SESSION['email_db'])) {
     <!-- メイン開始 --> 
     <div class="ck">
     <h2>Information</h2>
+
     <table class="info">
     <tr>
       <th>Employee Code</th> <!--表の見出し-->
-      <td> 140047 </td> <!--表のデータ-->
-    </tr>
-    <tr>
       <th>Employee Name</th>
+      <td> 140047 </td> <!--表のデータ-->
       <td> Taro </td>
     </tr>
     </table>

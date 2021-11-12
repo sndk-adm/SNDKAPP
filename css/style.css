@@ -61,6 +61,7 @@ h2 {
     text-decoration: none;
 }
 
+/* info テーブル書式　*/
 table.info {
     border-collapse: collapse;
     border: 1px solid #44110e;
