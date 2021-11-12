@@ -1,24 +1,17 @@
 
 <?php
 
-// any ini_set() for session configuration goes here when not using .user.ini
-
 session_start();
-if (!isset($_SESSION['count'])) {
-    $_SESSION['count'] = 0;
-}
-$_SESSION['count']++;
-
-echo "Hello #" . $_SESSION['count'];
-
-// session_start();
-//   //ログイン済みの場合
-//   if (!isset($_SESSION['email'])) { }
-//   else {
-//     echo 'ようこそ' .($_SESSION['email']) . 'さん';
-//     echo "<a href='/logout.php'>ログアウトはこちら</a>";
-//   exit;
-//   }
+//ログイン済みの場合
+if (!isset($_SESSION['email'])) { }
+   else {
+     echo 'Walcome ' .($_SESSION['email']) ;
+     echo '<br>';
+     echo "<a href='/home.php'>ホーム画面はこちら</a>";
+     echo '<br>';
+     echo "<a href='/logout.php'>ログアウトはこちら</a>";
+   exit;
+   }
 ?>
 
 <!DOCTYPE html>

@@ -1,13 +1,13 @@
 <?php
     session_start();
-    echo 'ここにセッション情報';
-    echo '<br>';
-    echo $_session['name_en'];
-    echo '<br>';
-    echo $_session['email'];
-    echo '<br>';
-    echo '入力内容の確認';
-    ?>
+    //ログイン済みの場合
+if (!isset($_SESSION['email'])) { }
+else {
+  echo 'Walcome ' .($_SESSION['email']) ;
+  echo '<br>';
+exit;
+}
+?>
 
 <!DOCTYPE html>
 <html>

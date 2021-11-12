@@ -1,8 +1,8 @@
     
     <?php
     session_start();
-    echo "Hello #" . $_SESSION['count'];
-    echo '<br>';
+     // セッションの有効期限を5分に設定
+     session_set_cookie_params(60 * 5);
     //index.phpで入力された値
     $email=($_POST['email']);
     $login_pass=($_POST['login_pass']);
@@ -11,9 +11,6 @@
     echo $email;
     echo '<br>';
     echo $login_pass;
-
-    // // セッションの有効期限を5分に設定
-    // // session_set_cookie_params(60 * 5);
    
     //データベース接続情報
       $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
@@ -24,7 +21,7 @@
       if (filter_var($email,FILTER_VALIDATE_EMAIL) === false) {
       echo $email;
       echo '<br>';
-      echo 'メールアドレスが不正です。';
+      echo 'email address is incorrect / メールアドレスが不正です。';
       return false;  }
 
       //DB内でPOSTされたメールアドレスを検索
@@ -32,39 +29,48 @@
       $pdo = new PDO($dsn, $user, $password);
       $stmt = $pdo->prepare('select * from login_emp where email = ?');
       $stmt->execute([$email]);
-        //取得したでレコードを1行返す
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        //取得したレコードを1行返す(メールアドレスはUNIQUEなので1行しか出ない)
+      $row = $stmt->fetch(PDO::FETCH_ASSOC);
       } 
       catch (\Exception $e) {
+      echo 'email address or password is incorrect /';  
+      echo '<br>';
       echo 'メールアドレス又はパスワードが間違っています。';
       echo '<br>';
       echo $e->getMessage() . PHP_EOL;
       }
 
-      //emailがDB内に存在しているかissetで確認
+      //emailがDB内に存在しているかissetで確認（データなければエラー表示）
       if (isset($row['email']) === false) {
         echo '<br>';
-        echo '従業員コードが見当たりません';
+        echo 'Employee Data is not found / 従業員コードが見当たりません';
       return false;
       }
 
-      //パスワード確認
+      //パスワード確認してレコードを取得する
       if ("$login_pass" == $row['login_pass']) {
+        $_session['empcode']=$row['empcode'];
+        $_session['prefix_en']=$row['prefix_en'];
         $_session['name_en_db']=$row['name_en'];
+        $_session['surname_en_db']=$row['surname_en'];
         $_session['email_db']=$row['email'];
         $_session['login_pass_db']=$row['login_pass'];
-        echo "--データベース情報--セッション代入";
-        echo '<br>';
-        echo $_session['name_en_db'];
-        echo '<br>';
-        echo $_session['email_db'];
-        echo '<br>';
-        echo $_session['login_pass_db'];
-    //   // header('Location: https://sndk-adm.herokuapp.com/home.php');
+      echo '<br>';
+      echo "--データベース情報--セッション代入";
+      echo '<br>';
+      echo $_session['surname_en_db'];
+      echo '<br>';
+      echo $_session['name_en_db'];
+      echo '<br>';
+      echo $_session['email_db'];
+      echo '<br>';
+      echo $_session['login_pass_db'];
+
+    // header('Location: https://sndk-adm.herokuapp.com/home.php');
     } 
       else {
       echo '<br>';
-      echo 'パスワードが間違っています。';
+      echo 'Password is incorrect / パスワードが間違っています。';
       return false;
       }
 
