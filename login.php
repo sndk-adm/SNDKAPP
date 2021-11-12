@@ -50,22 +50,22 @@
 
       //パスワード確認してレコードを取得する
       if ("$login_pass" == $row['login_pass']) {
-        $_session['empcode']=$row['empcode'];
-        $_session['prefix_en']=$row['prefix_en'];
-        $_session['name_en_db']=$row['name_en'];
-        $_session['surname_en_db']=$row['surname_en'];
-        $_session['email_db']=$row['email'];
-        $_session['login_pass_db']=$row['login_pass'];
+        $_SESSION['empcode']=$row['empcode'];
+        $_SESSION['prefix_en']=$row['prefix_en'];
+        $_SESSION['name_en_db']=$row['name_en'];
+        $_SESSION['surname_en_db']=$row['surname_en'];
+        $_SESSION['email_db']=$row['email'];
+        $_SESSION['login_pass_db']=$row['login_pass'];
       echo '<br>';
       echo "【データベース情報--セッションに代入】";
       echo '<br>';
-      echo $_session['surname_en_db'];
+      echo $_SESSION['surname_en_db'];
       echo '<br>';
-      echo $_session['name_en_db'];
+      echo $_SESSION['name_en_db'];
       echo '<br>';
-      echo $_session['email_db'];
+      echo $_SESSION['email_db'];
       echo '<br>';
-      echo $_session['login_pass_db'];
+      echo $_SESSION['login_pass_db'];
 
     // header('Location: https://sndk-adm.herokuapp.com/home.php');
     } 
