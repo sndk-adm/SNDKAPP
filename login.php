@@ -6,12 +6,13 @@
     //index.phpで入力された値
     $email=($_POST['email']);
     $login_pass=($_POST['login_pass']);
-    echo "Postされた情報";
+    echo "【Postされた情報】";
     echo '<br>';
     echo $email;
     echo '<br>';
     echo $login_pass;
-   
+    echo '<br>';
+
     //データベース接続情報
       $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
       $user = 'hhmxfllafjsciw';
@@ -56,7 +57,8 @@
         $_session['email_db']=$row['email'];
         $_session['login_pass_db']=$row['login_pass'];
       echo '<br>';
-      echo "--データベース情報--セッション代入";
+      echo '<br>';
+      echo "【データベース情報--セッションに代入】";
       echo '<br>';
       echo $_session['surname_en_db'];
       echo '<br>';
