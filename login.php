@@ -57,7 +57,6 @@
         $_session['email_db']=$row['email'];
         $_session['login_pass_db']=$row['login_pass'];
       echo '<br>';
-      echo '<br>';
       echo "【データベース情報--セッションに代入】";
       echo '<br>';
       echo $_session['surname_en_db'];
