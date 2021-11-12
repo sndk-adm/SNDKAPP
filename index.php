@@ -5,7 +5,7 @@ session_start();
 echo $_SESSION['email_db'];
 
 if (!isset($_SESSION['email_db'])) { }
-   {
+   else{
      echo 'Walcome ' .($_SESSION['email_db']) ;
      echo '<br>';
      echo "<a href='/home.php'>ホーム画面はこちら</a>";
