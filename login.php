@@ -67,7 +67,7 @@
       echo '<br>';
       echo $_SESSION['login_pass_db'];
 
-    // header('Location: https://sndk-adm.herokuapp.com/home.php');
+    header('Location: https://sndk-adm.herokuapp.com/home.php');
     } 
       else {
       echo '<br>';

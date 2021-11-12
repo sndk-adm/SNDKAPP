@@ -1,12 +1,14 @@
 <?php
-    session_start();
-    //ログイン済みの場合
-if (!isset($_SESSION['email'])) { }
-else {
-  echo 'Walcome ' .($_SESSION['email']) ;
+session_start();
+//ログイン済みの場合
+if (!isset($_SESSION['email_db'])) {
   echo '<br>';
-exit;
-}
+  echo "<a href='/index.php'>こちらからログインしてください</a>";
+  echo '<br>';
+  exit;
+   }
+   else{
+   }
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,17 @@ exit;
       <li><a href="index.php">APPLICATION</a></li>
       <li><a href="index.php">ADMIN</a></li>
     </ul>
-    <h1 id=""></h1>
+
+    <?php
+    session_start();
+    //ログインユーザー情報
+     echo '<br>';
+     echo "Code :".$_SESSION['empcode']." - ".$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
+     echo '<br>';
+    $_SESSION['prefix_en'];
+    $_SESSION['email_db'];
+    $_SESSION['login_pass_db'];
+    ?>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
     <div class="ck">

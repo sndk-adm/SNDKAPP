@@ -2,11 +2,9 @@
 <?php
 session_start();
 //ログイン済みの場合
-echo $_SESSION['email_db'];
-
 if (!isset($_SESSION['email_db'])) { }
    else{
-     echo 'Walcome ' .($_SESSION['email_db']) ;
+     echo 'Walcome User : ' .($_SESSION['email_db']) ;
      echo '<br>';
      echo "<a href='/home.php'>ホーム画面はこちら</a>";
      echo '<br>';
