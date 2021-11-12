@@ -3,7 +3,7 @@ session_start();
 //ログイン済みの場合
 if (!isset($_SESSION['email_db'])) {
   echo '<br>';
-  echo "<a href='/index.php'>こちらからログインしてください</a>";
+  echo "<a href='/index.php'>Please login here / こちらからログインしてください</a>";
   echo '<br>';
   exit;
    }
@@ -22,11 +22,11 @@ if (!isset($_SESSION['email_db'])) {
   <div class="wrapper">
     <!-- ヘッダー開始 -->
     <ul id="nav">
-      <li><a href="home.php">HOME</a></li>
-      <li><a href="home.php">USER SETTING</a></li>
-      <li><a href="index.php">APPLICATION</a></li>
-      <li><a href="index.php">ADMIN</a></li>
-      <li><a href="logout.php">LOGOUT</a></li>
+      <li><a href="home.php">Home</a></li>
+      <li><a href="home.php">User Setting</a></li>
+      <li><a href="index.php">Application</a></li>
+      <li><a href="index.php">Admin</a></li>
+      <li><a href="logout.php">Logout</a></li>
     </ul>
 
     <?php
@@ -42,7 +42,7 @@ if (!isset($_SESSION['email_db'])) {
     else {}
 
      echo '<br>';
-     echo "Welcome Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
+     echo "Welcome  Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
      echo '<br>';
     $_SESSION['email_db'];
     $_SESSION['login_pass_db'];
