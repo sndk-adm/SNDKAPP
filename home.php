@@ -31,10 +31,18 @@ if (!isset($_SESSION['email_db'])) {
     <?php
     session_start();
     //ログインユーザー情報
+
+    if ($_SESSION['prefix_en']==0) {
+      $_SESSION['prefix_en']='Mr.';}
+      elseif ($_SESSION['prefix_en']==1) {
+      $_SESSION['prefix_en']='Ms.';}
+      elseif ($_SESSION['prefix_en']==2) {
+      $_SESSION['prefix_en']='Mrs.';}
+    else {}
+
      echo '<br>';
-     echo "Code :".$_SESSION['empcode']." - ".$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
+     echo "Welcome Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
      echo '<br>';
-    $_SESSION['prefix_en'];
     $_SESSION['email_db'];
     $_SESSION['login_pass_db'];
     ?>

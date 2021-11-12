@@ -56,6 +56,8 @@
         $_SESSION['surname_en_db']=$row['surname_en'];
         $_SESSION['email_db']=$row['email'];
         $_SESSION['login_pass_db']=$row['login_pass'];
+      
+        //コメントアウトしてセッションデータを確認
       echo '<br>';
       echo "【データベース情報--セッションに代入】";
       echo '<br>';
@@ -67,8 +69,10 @@
       echo '<br>';
       echo $_SESSION['login_pass_db'];
 
+      //ホーム画面へ遷移
     header('Location: https://sndk-adm.herokuapp.com/home.php');
     } 
+    
       else {
       echo '<br>';
       echo 'Password is incorrect / パスワードが間違っています。';
