@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>MAIN MENU</title>
-    < link rel="stylesheet" href="bootstrap/css" type="text/css" charset="utf-8">
-    < link rel="stylesheet" href="bookmin.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="bookmin.css" type="text/css" charset="utf-8">
 </head>
 <body>
 <!-- PageHeader -->
