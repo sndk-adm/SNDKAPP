@@ -50,10 +50,6 @@ if (!isset($_SESSION['email_db'])) {
     ?>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
-  
-  <h2>Home</h2>
-
-  <!-- MainContents -->
     <div class="container-fluid">
 		<div class="row">
 		  <div class="col-xl-3">　<!--末尾の数字が[n/12]の[n]の部分 -->
