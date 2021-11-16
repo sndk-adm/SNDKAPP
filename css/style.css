@@ -20,7 +20,8 @@ h1 {
     padding: 10px 10px 10px 20px; }
 h2 {
     color: #44110e;
-    font-size: 20px; }
+    margin: 0px 0px 0px 10px; /*マージン上-右-下-左*/
+    font-size: 18px; }
     
 .SUB_TX {
         color: #44110e;

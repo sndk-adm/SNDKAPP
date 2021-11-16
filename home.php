@@ -52,12 +52,10 @@ if (!isset($_SESSION['email_db'])) {
     <!-- メイン開始 --> 
   
   <div class="ck">
-  <h2>Main Menu</h2>
+  <h2>-- Home --</h2>
 	<!-- MainContents -->
     <div class="container-fluid">
 		<div class="row">
-		<div class="col-xs-1"> </div>
-
 		  <div class="col-xl-3">　<!--末尾の数字が[n/12]の[n]の部分 -->
 			<div class="list-group">
 	        <label class="list-group-item active text-center">規定／書式</label>
