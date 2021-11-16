@@ -16,8 +16,8 @@ if (!isset($_SESSION['email_db'])) {
  <head>
    <meta charset="UTF-8">
     <title>LOGIN MENU</title>
-    <LINK rel="stylesheet" type="text/css" href="css/style.css">
     <LINK rel="stylesheet" href="css/bootstrap.css" type="text/css" charset="utf-8">
+    <LINK rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="wrapper">
@@ -52,7 +52,8 @@ if (!isset($_SESSION['email_db'])) {
     <!-- メイン開始 --> 
   
   <div class="ck">
-  <h2>-- Home --</h2>
+  <h2>Home</h2>
+     <br>
 	<!-- MainContents -->
     <div class="container-fluid">
 		<div class="row">
