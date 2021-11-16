@@ -14,7 +14,6 @@
 	<!-- システム名 -->
 	<div class="navbar-brand">Bookmin</div>
 	<!-- MasterMenu -->
-	
 		<ul  class="nav navbar-nav navbar-right">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">売上管理</a></li>
@@ -43,7 +42,7 @@
 		<div class="row">
 		<div class="col-xs-1"> </div>
 
-		  <div class="col-xs-3">
+		  <div class="col-xl-3">
 			<div class="list-group">
 	        <label class="list-group-item active text-center">売上管理</label>
 	        <a href="#" class="list-group-item">日次売上集計</a>
@@ -52,7 +51,7 @@
         	</div>
 		  </div>
 
-		<div class="col-xs-3"> <!--末尾の数字が[n/12]の[n]の部分 -->
+		<div class="col-xl-3"> <!--末尾の数字が[n/12]の[n]の部分 -->
 			<div class="list-group">
 	        <label class="list-group-item active text-center">在庫管理</label>
 	        <a href="#" class="list-group-item">在庫検索</a>
@@ -62,7 +61,7 @@
 			</div>
 		</div>
 
-		<div class="col-xs-3">
+		<div class="col-xl-3">
 			<div class="list-group">
 	        <label class="list-group-item active text-center">マスタ管理</label>
 	        <a href="#" class="list-group-item">管理システムメニュー</a>

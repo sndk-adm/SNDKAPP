@@ -5165,7 +5165,7 @@ input[type="button"].btn-block {
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #007bff;
+  background-color: #004085;
   border-color: #007bff;
 }
 
@@ -5195,8 +5195,8 @@ input[type="button"].btn-block {
 
 .list-group-item-primary.list-group-item-action.active {
   color: #fff;
-  background-color: #004085;
-  border-color: #004085;
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
 .list-group-item-secondary {
