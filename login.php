@@ -70,7 +70,7 @@
       echo $_SESSION['login_pass_db'];
 
       //ホーム画面へ遷移
-    header('Location: https://sndk-adm.herokuapp.com/main.php');
+    header('Location: https://sndk-adm.herokuapp.com/home.php');
     } 
     
       else {

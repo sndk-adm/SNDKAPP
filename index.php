@@ -19,6 +19,8 @@ if (!isset($_SESSION['email_db'])) { }
    <meta charset="UTF-8">
     <title>LOGIN MENU</title>
     <LINK rel="stylesheet" type="text/css" href="css/style.css">
+    <LINK rel="stylesheet" href="css/bootstrap.css" type="text/css" charset="utf-8">
+
 </head>
 
 <body>
