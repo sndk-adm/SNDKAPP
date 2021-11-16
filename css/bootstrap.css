@@ -5124,7 +5124,7 @@ input[type="button"].btn-block {
 .list-group-item-action:hover, .list-group-item-action:focus {
   color: #495057;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #818182;
 }
 
 .list-group-item-action:active {
