@@ -56,37 +56,42 @@ if (!isset($_SESSION['email_db'])) {
      $dbh = new PDO($dsn, $user, $password, $option);   
      $sql = 'SELECT * FROM dt_emp';
      $stmt = $dbh->query($sql);
-     function createHtmlTable($stmt) {
-      $html = "<table>";
-      // カラム名
-    $ffields = $stmt->fetch_fields();
-    $html .= "<tr>";
-    foreach ($ffields as $val) {
-      $html .= "<th>" . $val->name . "</th>";
-      }
-      $html .= "</tr>";
-    // レコード
-    foreach ($stmt as $row) {
-      $html .= "<tr>";
-
-          echo $row['dt_id'].'：'.$row['dt_sex'].'：'.$row['dt_idcard'].'：'.$row['dt_prefix_id'].'：'.$row['dt_name_en'].'：'.$row['dt_surname_en'].'：'.$row['dt_birthday'].'：'.$row['dt_email'].'：'.$row['dt_contact'];
-          echo '<br>';
-      $html .= "</tr>";
+     foreach ($stmt as $row) {
+     echo $row['dt_id'].'：'.$row['dt_sex'].'：'.$row['dt_idcard'].'：'.$row['dt_prefix_id'].'：'.$row['dt_name_en'].'：'.$row['dt_surname_en'].'：'.$row['dt_birthday'].'：'.$row['dt_email'].'：'.$row['dt_contact'];
+     echo '<br>';
           }
-      $html .= "</table>";
-      return $html;
-        }
+     }
 
-  }catch (PDOException $e){
+     catch (PDOException $e){
       print('Error:'.$e->getMessage());
       die();
   } 
   $dbh = null;
-
-
     ?>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
+
+    <cfquery datasource="$stmt" name="emp">
+    SELECT * FROM $stmt
+    </cfquery>
+    <table border="1">
+    <tr>
+    <th>dt_id</th>
+    <th>dt_name_en</th>
+    <th>dt_surname_en</th>
+    </tr>
+    <cfoutput query="qArt">
+    <tr>
+    <td width="50">#emp.dt_id#</td>
+    <td width="50">#emp.dt_name_en#</td>
+    <td width="50">#emp.dt_surname_en#</td>
+    <!-- <td><img src="/cfdocs/images/artgallery/#qArt.LARGEIMAGE#"></td> -->
+    </tr>
+    </cfoutput>
+    </table>
+
+
+
     <div class="container-fluid">
 		<div class="row">
 		  <div class="col-xl-3">　<!--末尾の数字が[n/12]の[n]の部分 -->
