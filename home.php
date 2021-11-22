@@ -56,11 +56,27 @@ if (!isset($_SESSION['email_db'])) {
      $dbh = new PDO($dsn, $user, $password, $option);   
      $sql = 'SELECT * FROM dt_emp';
      $stmt = $dbh->query($sql);
-     foreach ($stmt as $row) {
+     function createHtmlTable($stmt) {
+      $html = "<table>";
+      // カラム名
+    $ffields = $stmt->fetch_fields();
+    $html .= "<tr>";
+    foreach ($ffields as $val) {
+      $html .= "<th>" . $val->name . "</th>";
+      }
+      $html .= "</tr>";
+    // レコード
+    foreach ($stmt as $row) {
+      $html .= "<tr>";
+
           echo $row['dt_id'].'：'.$row['dt_sex'].'：'.$row['dt_idcard'].'：'.$row['dt_prefix_id'].'：'.$row['dt_name_en'].'：'.$row['dt_surname_en'].'：'.$row['dt_birthday'].'：'.$row['dt_email'].'：'.$row['dt_contact'];
           echo '<br>';
+      $html .= "</tr>";
           }
-      
+      $html .= "</table>";
+      return $html;
+        }
+
   }catch (PDOException $e){
       print('Error:'.$e->getMessage());
       die();
