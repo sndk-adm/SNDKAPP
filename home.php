@@ -71,7 +71,7 @@ if (!isset($_SESSION['email_db'])) {
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
 
-    <cfquery datasource="$stmt" name="emp">
+    <cfquery datasource="$stmt" name="$sql">
     SELECT * FROM $stmt
     </cfquery>
     <table border="1">
@@ -80,7 +80,7 @@ if (!isset($_SESSION['email_db'])) {
     <th>dt_name_en</th>
     <th>dt_surname_en</th>
     </tr>
-    <cfoutput query="qArt">
+    <cfoutput query="$sql">
     <tr>
     <td width="50">#emp.dt_id#</td>
     <td width="50">#emp.dt_name_en#</td>
@@ -90,7 +90,8 @@ if (!isset($_SESSION['email_db'])) {
     </cfoutput>
     </table>
 
-
+    <br>
+    <br>
 
     <div class="container-fluid">
 		<div class="row">
