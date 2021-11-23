@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>データベース接続</title>
-    
+</head>
+<body>    
 <?php
 
 $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
@@ -9,10 +10,8 @@ $user = 'hhmxfllafjsciw';
 $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
 
 $dbh = new PDO($dsn,$user,$password);
-
-$result = pg_query($dbh, "SELECT * FROM login_emp");
-
-$stmt = $dbh->query($sql);
+$sql = 'SELECT * FROM login_emp';
+$result = $dbh->query($sql);
 
 $arr = pg_fetch_all($result);
 
