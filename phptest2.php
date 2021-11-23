@@ -44,7 +44,7 @@ $dbh = new PDO($dsn,$user,$password);
                         print '<table><tr><th>№</th><th>テーブル名</th></tr>';
                         if(isset($_POST['name'])==true){
                             //データベースに対して実行するSQL文を作成
-                            $sql = 'SELECT * FROM USER_TABLES';
+                            $sql = 'SELECT relname AS table_name FROM postgresql-angular-08182';
                             //SQL文を実行
                             $table_stmt=$dbh->prepare($sql);
                             $table_stmt->execute();
