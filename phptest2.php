@@ -44,23 +44,24 @@ $dbh = new PDO($dsn,$user,$password);
                         print '<table><tr><th>№</th><th>テーブル名</th></tr>';
                         if(isset($_POST['name'])==true){
                             //データベースに対して実行するSQL文を作成
-                            $sql = 'SELECT relname AS table_name FROM postgresql-angular-08182';
+                            $sql = 'select schemaname, tablename, tableowner from pg_tables';
                             //SQL文を実行
                             $table_stmt=$dbh->prepare($sql);
                             $table_stmt->execute();
                             //行番号用変数を用意
-                            $i=1;
-                            //データベースのテーブルすべて読み出すまでループ
-                            while($table_rec = $table_stmt->fetch(PDO::FETCH_ASSOC)){
-                                //連想配列すべてを読み出すまでループ
-                                foreach($table_rec as $key => $val){
-                                    //番号とテーブル名とキーを表示
-                                    print '<tr><td>'.$i.'</td><td>'.$val.'('.$key.')</td></tr>';
-                                    $i+=1;
-                                }
-                            }
-                        }
+                        //     $i=1;
+                        //     //データベースのテーブルすべて読み出すまでループ
+                        //     while($table_rec = $table_stmt->fetch(PDO::FETCH_ASSOC)){
+                        //         //連想配列すべてを読み出すまでループ
+                        //         foreach($table_rec as $key => $val){
+                        //             //番号とテーブル名とキーを表示
+                        //             print '<tr><td>'.$i.'</td><td>'.$val.'('.$key.')</td></tr>';
+                        //             $i+=1;
+                        //         }
+                        //     }
+                        // }
                         print '</table>';
+                        print '$table_stmt';
                         break;
                 }
             }
