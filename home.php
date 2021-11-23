@@ -60,13 +60,15 @@ if (!isset($_SESSION['email_db'])) {
      echo $row['dt_id'].'：'.$row['dt_sex'].'：'.$row['dt_idcard'].'：'.$row['dt_prefix_id'].'：'.$row['dt_name_en'].'：'.$row['dt_surname_en'].'：'.$row['dt_birthday'].'：'.$row['dt_email'].'：'.$row['dt_contact'];
      echo '<br>';
           }
-     }
+     print('hello');
+
+        }
 
      catch (PDOException $e){
       print('Error:'.$e->getMessage());
       die();
-  } 
-  $dbh = null;
+     } 
+    $dbh = null;
     ?>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
@@ -126,6 +128,8 @@ if (!isset($_SESSION['email_db'])) {
 		</div> <!-- <div class="row"> -->
 	</div> <!-- <div class="container-fluid"> -->
     
+  <caption> PostgreSQL データベース一覧 </caption>
+
     <!-- メイン終了 -->
 
     <!-- フッター開始 -->
