@@ -49,26 +49,26 @@ if (!isset($_SESSION['email_db'])) {
      echo '<br>';
     
      //データベース情報の取得
-     $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
-     $user = 'hhmxfllafjsciw';
-     $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
-     try{
-     $dbh = new PDO($dsn, $user, $password, $option);   
-     $sql = 'SELECT * FROM dt_emp';
-     $stmt = $dbh->query($sql);
-     foreach ($stmt as $row) {
-     echo $row['dt_id'].'：'.$row['dt_sex'].'：'.$row['dt_idcard'].'：'.$row['dt_prefix_id'].'：'.$row['dt_name_en'].'：'.$row['dt_surname_en'].'：'.$row['dt_birthday'].'：'.$row['dt_email'].'：'.$row['dt_contact'];
-     echo '<br>';
-          }
-     print('hello');
+    //  $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
+    //  $user = 'hhmxfllafjsciw';
+    //  $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
+    //  try{
+    //  $dbh = new PDO($dsn, $user, $password, $option);   
+    //  $sql = 'SELECT * FROM dt_emp';
+    //  $stmt = $dbh->query($sql);
+    //  foreach ($stmt as $row) {
+    //  echo $row['dt_id'].'：'.$row['dt_sex'].'：'.$row['dt_idcard'].'：'.$row['dt_prefix_id'].'：'.$row['dt_name_en'].'：'.$row['dt_surname_en'].'：'.$row['dt_birthday'].'：'.$row['dt_email'].'：'.$row['dt_contact'];
+    //  echo '<br>';
+    //       }
+    //  print('hello');
 
-        }
+    //     }
 
-     catch (PDOException $e){
-      print('Error:'.$e->getMessage());
-      die();
-     } 
-    $dbh = null;
+    //  catch (PDOException $e){
+    //   print('Error:'.$e->getMessage());
+    //   die();
+    //  } 
+    // $dbh = null;
     ?>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
@@ -80,7 +80,7 @@ if (!isset($_SESSION['email_db'])) {
 		<div class="row">
 		  <div class="col-xl-3">　<!--末尾の数字が[n/12]の[n]の部分 -->
 			<div class="list-group">
-	        <label class="list-group-item active text-center">規定／書式</label>
+	        <label class="list-group-item active text-center">Company Document / Form </label>
 	        <a href="#" class="list-group-item">Organization Chart</a>
 	        <a href="#" class="list-group-item">Company Calendar</a>
 	        <a href="#" class="list-group-item">Labor Regulations</a>
