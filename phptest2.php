@@ -20,8 +20,8 @@ $stmt = $dbh->query($sql);
 
 $arr = pg_fetch_all($stmt);
 
-  print "<table id=\"dblist\" summary=\"PostgreSQLのデータベースの一覧\">\n";
-  print "<caption>PostgreSQL データベース一覧</caption>\n";
+print "<table id=\"dblist\" summary=\"PostgreSQLのデータベースの一覧\">\n";
+print "<caption>PostgreSQL データベース一覧</caption>\n";
 
   //テーブルヘッダとしてフィールド（カラム）名を出力
   print "<tr>\n";

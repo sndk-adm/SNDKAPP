@@ -25,7 +25,7 @@ if (!isset($_SESSION['email_db'])) {
     <ul id="nav">
       <li><a href="home.php">Home</a></li>
       <li><a href="home.php">User Setting</a></li>
-      <li><a href="index.php">Admin Menu</a></li>
+      <li><a href="home.php">Admin Menu</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
 
@@ -72,26 +72,7 @@ if (!isset($_SESSION['email_db'])) {
     ?>
     <!-- ヘッダー終了 -->
     <!-- メイン開始 --> 
-
-    <cfquery datasource="$stmt" name="$sql">
-    SELECT * FROM $stmt
-    </cfquery>
-    <table border="1">
-    <tr>
-    <th>dt_id</th>
-    <th>dt_name_en</th>
-    <th>dt_surname_en</th>
-    </tr>
-    <cfoutput query="$sql">
-    <tr>
-    <td width="50">#emp.dt_id#</td>
-    <td width="50">#emp.dt_name_en#</td>
-    <td width="50">#emp.dt_surname_en#</td>
-    <!-- <td><img src="/cfdocs/images/artgallery/#qArt.LARGEIMAGE#"></td> -->
-    </tr>
-    </cfoutput>
-    </table>
-
+   
     <br>
     <br>
 
@@ -100,36 +81,33 @@ if (!isset($_SESSION['email_db'])) {
 		  <div class="col-xl-3">　<!--末尾の数字が[n/12]の[n]の部分 -->
 			<div class="list-group">
 	        <label class="list-group-item active text-center">規定／書式</label>
-	        <a href="#" class="list-group-item">組織図</a>
-	        <a href="#" class="list-group-item">カレンダー</a>
-	        <a href="#" class="list-group-item">就業規則</a>
-          <a href="#" class="list-group-item">精算フォーム</a>
+	        <a href="#" class="list-group-item">Organization Chart</a>
+	        <a href="#" class="list-group-item">Company Calendar</a>
+	        <a href="#" class="list-group-item">Labor Regulations</a>
+          <a href="#" class="list-group-item">Settlement Form </a>
         	</div>
 		  </div>
 
 		<div class="col-xl-3"> <!--末尾の数字が[n/12]の[n]の部分 -->
 			<div class="list-group">
-	        <label class="list-group-item active text-center">オンライン申請</label>
-	        <a href="#" class="list-group-item">在職証明書</a>
-	        <a href="#" class="list-group-item">医療費申請</a>
-	        <a href="#" class="list-group-item">社用車使用</a>
-			    <a href="#" class="list-group-item">ＩＴリクエスト</a>
+	        <label class="list-group-item active text-center">Online Application </label>
+	        <a href="#" class="list-group-item">Certificate Of Employment </a>
+	        <a href="#" class="list-group-item">Medical Expense Application</a>
+	        <a href="#" class="list-group-item">Booking Company Car </a>
+			    <a href="#" class="list-group-item">IT Request </a>
 			</div>
 		</div>
 
 		<div class="col-xl-3">
 			<div class="list-group">
-	        <label class="list-group-item active text-center">業務</label>
-	        <a href="#" class="list-group-item">従業員評価</a>
-	        <a href="#" class="list-group-item">CORPS活動</a>
-	        <a href="#" class="list-group-item">その他</a>
+	        <label class="list-group-item active text-center">Task / Activity</label>
+	        <a href="#" class="list-group-item">Employee Evaluation</a>
+	        <a href="#" class="list-group-item">CORPS Activity</a>
+	        <a href="#" class="list-group-item">Other Task</a>
 			</div>
 		</div>
 		</div> <!-- <div class="row"> -->
 	</div> <!-- <div class="container-fluid"> -->
-    
-  <caption> PostgreSQL データベース一覧 </caption>
-
     <!-- メイン終了 -->
 
     <!-- フッター開始 -->
