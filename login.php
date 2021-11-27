@@ -6,7 +6,7 @@
     //index.phpで入力された値
     $email=($_POST['email']);
     $login_pass=($_POST['login_pass']);
-    echo "【Postされた情報】";
+    echo "【Post Data】";
     echo '<br>';
     echo $email;
     echo '<br>';
@@ -22,7 +22,7 @@
       if (filter_var($email,FILTER_VALIDATE_EMAIL) === false) {
       echo $email;
       echo '<br>';
-      echo 'email address is incorrect / メールアドレスが不正です。';
+      echo 'E-mail address is incorrect / メールアドレスが不正です。';
       return false;  }
 
       //DB内でPOSTされたメールアドレスを検索
@@ -34,7 +34,7 @@
       $row = $stmt->fetch(PDO::FETCH_ASSOC);
       } 
       catch (\Exception $e) {
-      echo 'email address or password is incorrect /';  
+      echo 'E-mail address or Password is incorrect /';  
       echo '<br>';
       echo 'メールアドレス又はパスワードが間違っています。';
       echo '<br>';
