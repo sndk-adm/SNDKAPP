@@ -46,8 +46,7 @@ if (!isset($_SESSION['email_db'])) {
      echo '<br>';
     $_SESSION['email_db'];
     $_SESSION['login_pass_db'];
-     echo '<br>';
-    
+         
      //データベース情報の取得
     //  $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
     //  $user = 'hhmxfllafjsciw';
