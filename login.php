@@ -23,6 +23,9 @@
       echo $email;
       echo '<br>';
       echo 'E-mail address is incorrect / メールアドレスが不正です。';
+      echo '<br>';
+      echo '<br>';
+      echo "<a href='/index.php'>Back to Login Page / ログイン画面はこちら</a>";
       return false;  }
 
       //DB内でPOSTされたメールアドレスを検索
@@ -38,6 +41,8 @@
       echo '<br>';
       echo 'メールアドレス又はパスワードが間違っています。';
       echo '<br>';
+      echo '<br>';
+      echo "<a href='/index.php'>Back to Login Page / ログイン画面はこちら</a>";
       echo $e->getMessage() . PHP_EOL;
       }
 
@@ -45,6 +50,9 @@
       if (isset($row['email']) === false) {
         echo '<br>';
         echo 'Employee Data is not found / 従業員コードが見当たりません';
+        echo '<br>';
+        echo '<br>';
+        echo "<a href='/index.php'>Back to Login Page / ログイン画面はこちら</a>";
       return false;
       }
 
