@@ -59,7 +59,6 @@ if (!isset($_SESSION['email_db'])) {
     //  print('hello');
 
     //     }
-
     //  catch (PDOException $e){
     //   print('Error:'.$e->getMessage());
     //   die();
