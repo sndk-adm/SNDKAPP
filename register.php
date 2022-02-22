@@ -77,8 +77,8 @@
       <br><br>
       <button type="submit"style="font-size: 18px;width : 180px;height : 40px;margin-left:110px;">Sign Up</button>
       </form>
-
-      <li><a href="index.php">Login Page</a></li>
+      <br><br>
+      <li><a href="index.php">Go to Login Page</a></li>
     
       </div>
     <!-- メイン終了 -->

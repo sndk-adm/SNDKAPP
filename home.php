@@ -25,7 +25,7 @@ if (!isset($_SESSION['email_db'])) {
     <ul id="nav">
       <li><a href="home.php">Home</a></li>
       <li><a href="home.php">User Setting</a></li>
-      <li><a href="home.php">Admin Menu</a></li>
+      <li><a href="phptest2.php">Admin Menu</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
 
