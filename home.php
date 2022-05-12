@@ -32,8 +32,7 @@ if (!isset($_SESSION['email_db'])) {
       <li><a href="logout.php">Logout</a></li>
     </ul>
    </div> -->
-   </body>
-</html>
+
 
   <?php
     session_start();
@@ -51,5 +50,15 @@ if (!isset($_SESSION['email_db'])) {
      echo '<br>';
      echo "　 Welcome ---> Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
      echo '<br>';
-     echo "　 Email :".$_SESSION['email']."    
+     echo "　 E-mail :".$_SESSION['email'];
+
   ?>
+
+    <!-- フッター開始 -->
+    <div id="footer">
+        <small>&copy;Copyright　-   SIAM NDK.All rights reserved.</small>
+    </div>
+    <!-- フッター終了 -->
+    
+</body>
+</html>
