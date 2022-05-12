@@ -24,8 +24,11 @@ if (!isset($_SESSION['email_db'])) {
     <!-- ヘッダー開始 -->
     <ul id="nav">
       <li><a href="home.php">Home</a></li>
-      <li><a href="home.php">User Setting</a></li>
-      <li><a href="phptest2.php">Admin Menu</a></li>
+      <li><a href="home.php">Medical</a></li>
+      <li><a href="phptest2.php">Marriage</a></li>
+      <li><a href="phptest2.php">Maternity</a></li>
+      <li><a href="phptest2.php">Funeral</a></li>
+      <li><a href="phptest2.php">Ordination</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
 
@@ -43,7 +46,9 @@ if (!isset($_SESSION['email_db'])) {
 
      echo '<br>';
      echo "　 Welcome ---> Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
-         
+     echo '<br>';
+     echo "　 Email :".$_SESSION['email']."    
+     
      //データベース情報の取得
     //  $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
     //  $user = 'hhmxfllafjsciw';
@@ -83,23 +88,7 @@ if (!isset($_SESSION['email_db'])) {
         	</div>
 		  </div>
 
-		<div class="col-xl-3"> <!--末尾の数字が[n/12]の[n]の部分 -->
-			<div class="list-group">
-	        <label class="list-group-item active text-center">Online Application </label>
-	        <a href="#" class="list-group-item">Certificate Of Employment </a>
-	        <a href="#" class="list-group-item">Medical Expense Application</a>
-	        <a href="#" class="list-group-item">Booking Company Car </a>
-			    <a href="#" class="list-group-item">IT Request </a>
-			</div>
-		</div>
-
-		<div class="col-xl-3">
-			<div class="list-group">
-	        <label class="list-group-item active text-center">Task / Activity</label>
-	        <a href="#" class="list-group-item">Employee Evaluation</a>
-	        <a href="#" class="list-group-item">CORPS Activity</a>
-	        <a href="#" class="list-group-item">Other Task</a>
-			</div>
+	
 		</div>
 		</div> <!-- <div class="row"> -->
 	</div> <!-- <div class="container-fluid"> -->
