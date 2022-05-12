@@ -49,7 +49,7 @@ if (!isset($_SESSION['email_db'])) {
      echo '<br>';
      echo "　 Email :".$_SESSION['email']."    
      
-     //データベース情報の取得
+    //データベース情報の取得
     //  $dsn = 'pgsql:dbname=dfl9gst6l1jfl3 host=ec2-3-211-245-154.compute-1.amazonaws.com  port=5432';
     //  $user = 'hhmxfllafjsciw';
     //  $password = 'dd16a7e2edfc599031962ac809ded8807cfe6d41cbb2c8b73681578bf5841f5f';
@@ -76,22 +76,7 @@ if (!isset($_SESSION['email_db'])) {
     <br>
     <br>
 
-    <div class="container-fluid">
-		<div class="row">
-		  <div class="col-xl-3">　<!--末尾の数字が[n/12]の[n]の部分 -->
-			<div class="list-group">
-	        <label class="list-group-item active text-center">Company Document / Form </label>
-	        <a href="#" class="list-group-item">Organization Chart</a>
-	        <a href="#" class="list-group-item">Company Calendar</a>
-	        <a href="#" class="list-group-item">Labor Regulations</a>
-          <a href="#" class="list-group-item">Settlement Form </a>
-        	</div>
-		  </div>
 
-	
-		</div>
-		</div> <!-- <div class="row"> -->
-	</div> <!-- <div class="container-fluid"> -->
     <!-- メイン終了 -->
 
     <!-- フッター開始 -->
