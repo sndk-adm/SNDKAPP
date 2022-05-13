@@ -17,26 +17,22 @@ if (!isset($_SESSION['email_db'])) { }
  <head>
    <meta charset="UTF-8">
     <title>LOGIN MENU</title>
-    <LINK rel="stylesheet" type="text/css" href="css/style.css">
  </head>
 
 <body>
     <!-- ヘッダー開始 -->
-    <div class="REG_BOX">
-    <div class="REG_BOX_TX">User Login</div>
+    <div>User Login</div>
     </div>
     <!-- ヘッダー終了 -->
     
     <!-- メイン開始 --> 
     <!-- サブ見出し --> 
-     <div class="SUB_TX">Please Enter E-mail & login Password</div>  
+     <div>Please Enter E-mail & login Password</div>  
 
-     <div class="FILL_TX">
-      <form  action="login.php" method="post">
-
-      <label for="email">E-mail</label>
-      <input type="email" name="email"style="margin-left: 30px;padding-left: 10px;font-size: 17px;">
-      <br><br>
+     <form  action="login.php" method="post">
+     <label for="email">E-mail</label>
+     <input type="email" name="email"style="margin-left: 30px;padding-left: 10px;font-size: 17px;">
+     <br><br>
 
       <label for="login_pass">Password</label>
       <input type="text" name="login_pass"style="margin-left: 7px;padding-left: 10px;font-size: 17px;">

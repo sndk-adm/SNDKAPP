@@ -4,7 +4,6 @@
  <head>
    <meta charset="UTF-8">
    <title>REGISTER</title>
-   <LINK rel="stylesheet" href="css/style.css"> <!-- type="text/css" -->
 
    <!-- 入力データのチェックをReturnで返す -->
    <script type="text/javascript">
@@ -46,16 +45,15 @@
 
  <body>
  <!-- ヘッダー開始 -->
- <div class="REG_BOX">
-   <div class="REG_BOX_TX">New Registration Form</div>
+   <div>New Registration Form</div>
  </div>
  <!-- ヘッダー終了 -->
  
  <!-- メイン開始 --> 
       <!-- サブ見出し --> 
-      <div class="SUB_TX">Please fill in the item</div>
+      <div>Please fill in the item</div>
       <!-- 入力項目 -->
-      <div class="FILL_TX">
+      <div>
       <form action="signUp.php" method="post" name="regForm" onSubmit="return check();">
       <label for="EMPCODE">Employee Code ：</label>
       <input type="text" name="EMPCODE" maxlength="10" style="margin-left: 5px;padding-left: 10px;font-size: 17px;">
