@@ -2,7 +2,7 @@
     <?php
     session_start();
      // セッションの有効期限を5分に設定
-     session_set_cookie_params(60 * 5);
+    //  session_set_cookie_params(60 * 5);
     //index.phpで入力された値
     $email=($_POST['email']);
     $login_pass=($_POST['login_pass']);

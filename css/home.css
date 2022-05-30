@@ -1,0 +1,233 @@
+@charset "UTF-8";
+ 
+/* CSSコード */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #fff;
+}
+
+.logo {
+  letter-spacing: -1px;
+  font-size: 35px;
+  color: #5469d4;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  text-decoration: unset;
+}
+  
+/* ここから下がハンバーガーメニューに関するCSS */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: .5s;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+  font-size: 25px;
+  left: 100%;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる padding 上 右 下 左 */
+  padding:0% 0% 0% 10%;
+}
+
+
+/* メインお知らせ設定----------------------------------------------------------------------------- */
+ /* インフォメーションボックス */
+.info {
+  /* -webkit-overflow-scrolling: touch; */
+  /* -webkit-box-orient: vertical; */
+    /* -webkit-box-orient: horizontal; */
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%; /* インフォメーションボックスの画面最大化 */
+  height: 500px;
+  margin: 0 auto;
+  /* overflow-y: scroll */
+}
+
+@media (min-width:480px) {
+  .info {
+    padding: 0 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    }
+}
+
+.info dd,
+
+.info dt {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  border-bottom: 1px dotted #343a40;
+}
+
+@media (min-width:480px) {
+  .info dt {
+  font-style: normal;
+  font-weight: initial;
+  }
+}
+
+.info dt:first-of-type {
+  padding-top: .5em;
+  /* border-top: 1px dotted #343a40 */
+}
+
+.info dt span {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 10em;
+  margin-right: .5em;
+  padding: 0 .5em;
+  background-color: #5469d4;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 1.75;
+  text-align: center
+}
+
+.info time {
+  color: #adb5bd;
+  padding-top: .5em;
+
+}
+
+.info dd {
+  width: calc(100% - 12.5em);
+  padding-left: 0.5em;
+}
+.info dd:first-of-type {
+  padding-top: .5em;
+  /* border-top: 1px dotted #343a40 */
+}
+.info dd time {
+  margin-right: .5em
+}
+
+
+@media (min-width:480px) {
+.info dd {
+  margin-left: 0;
+  margin-bottom: .5em;
+  border-bottom: 1px dotted #343a40
+}  
+}
+
+.info dd:nth-of-type(-n+3) {
+  position: relative
+}
+
+/* サークル設定 */
+.container {
+  height: 80px;
+  width: 100%;
+  /* text-align: center; */
+}
+
+/* サークルの横幅均等割り付け */
+/* .container ol {
+  display: flex;
+  justify-content: space-between;
+  padding:0px;
+} */
+
+.container ol li{
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 1px #54a5d4;
+  background-color: #54a5d4;
+  margin:5px;
+  /* margin: 0 30px; */
+}
+
+.container  li a{
+  position: absolute;
+  display: inline-block;
+  left: 0%;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+}
