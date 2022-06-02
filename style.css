@@ -178,8 +178,9 @@
   @keyframes animationLeftRight {
 	/* アニメーション指定はなし */ } 
 
-  @media (max-width:640px) {
-	  
+	/* 480px以下に適用されるCSS（スマホ用）------------------------------------------------------------------------------ */  
+  @media screen and (max-width: 480px) {
+
 	/* IOSにCSSを効かせる */
 	input{-webkit-appearance: none;}
 
@@ -215,4 +216,11 @@
 		 font-weight: 600;
 		 cursor: pointer
 		}
-	}
+		.formbg {
+			margin: 0px auto;
+			width: 80%;
+			max-width: 450px; /* ログイン入力ボックスの横幅 */
+			background: white;
+			border-radius: 4px;
+			box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;	}
+		}
