@@ -94,6 +94,18 @@
   font-size: 25px;
   left: 100%;
 }
+.atama{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 10em;
+  margin-right: .5em;
+  padding: 0 .5em;
+  background-color: #5469d4;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 1.75;
+  text-align: center
+}
 
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked ~ .nav_content {

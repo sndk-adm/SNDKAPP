@@ -28,7 +28,7 @@ if (!isset($_SESSION['email_db'])) {
         <!-- メニュー -->
         <nav class="nav_content">
           <ul class="nav_list">
-            <a>Menu</a>
+            <a class="atama">Menu</a>
             <li class="nav_item"><a href="">User Info</a></li>
             <li class="nav_item"><a href="">History</a></li>
             <li class="nav_item"><a href="">Application</a></li>
@@ -41,6 +41,7 @@ if (!isset($_SESSION['email_db'])) {
     <div>
       <hr style="width: 100%;border-top: 5px solid #5469d4;" />
     </div>
+
 
   <!-- ログインユーザー情報の表示 -->
 
