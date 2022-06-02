@@ -179,8 +179,40 @@
 	/* アニメーション指定はなし */ } 
 
   @media (max-width:640px) {
-	input[type="email"],  
-	input[type="password"],
-	input[type="submit"]{
-		-webkit-appearance: none;}
+	  
+	/* IOSにCSSを効かせる */
+	input{-webkit-appearance: none;}
+
+	input[type="email"] {
+		 font-size: 16px;
+		 line-height: 28px;
+		 padding: 8px 16px;
+		 width: 100%;
+		 min-height: 44px;
+		 background-color: #d9f2f8;
+		 border: 1px sorid #4f4f52;
+		 border-radius: 4px 　
+		 }
+	  input[type="password"] {
+		  font-size: 16px;
+		  line-height: 28px;
+		  padding: 8px 16px;
+		  width: 100%;
+		  min-height: 44px;
+		  background-color: #d9f2f8;
+		  border: 1px sorid #4f4f52;
+		  border-radius: 4px 　
+		  }
+  	  input[type="submit"] {
+		 font-size: 16px;
+		 background-color: #3a3ae9;
+		 border: 1px solid #3a3ae9;
+		 color: #ffffff;
+		 padding: 8px 16px;
+		 border-radius: 4px;
+		 width: 100%;
+		 min-height: 50px;
+		 font-weight: 600;
+		 cursor: pointer
+		}
 	}
