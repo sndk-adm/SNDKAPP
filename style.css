@@ -112,6 +112,7 @@
   
  
 	input[type="email"] {
+	  -webkit-appearance: none;	  /* IOSにCSSを効かせる */
 	  font-size: 16px;
 	  line-height: 28px;
 	  padding: 8px 16px;
@@ -121,8 +122,8 @@
 	  border: 1px sorid #4f4f52;
 	  border-radius: 4px 　
 	  }
-  
 	input[type="password"] {
+		-webkit-appearance: none;  /* IOSにCSSを効かせる */
 		font-size: 16px;
 		line-height: 28px;
 		padding: 8px 16px;
@@ -134,6 +135,7 @@
 		}
 
 	input[type="submit"] {
+	  -webkit-appearance: none;  /* IOSにCSSを効かせる */
 	  font-size: 16px;
 	  background-color: #3a3ae9;
 	  border: 1px solid #3a3ae9;
