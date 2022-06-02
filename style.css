@@ -177,5 +177,8 @@
 	/* アニメーション指定はなし */ } 
 
   @media (max-width:640px) {
-		
+	input[type="email"],  
+	input[type="password"],
+	input[type="submit"]{
+		-webkit-appearance: none;}
 	}
