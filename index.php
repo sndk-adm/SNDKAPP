@@ -16,21 +16,21 @@ if (!isset($_SESSION['email_db'])) { }
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">　<!--デバイスによってCSS変更 -->
   <title>Sign-in</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" > <!--削除 style="flex-grow: 1; z-index: 9;" -->
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a rel="dofollow">SIAM NDK CO.,LTD.</a></h1>
+          <h1><a>SIAM NDK CO.,LTD.</a></h1>
         </div>
-
 
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Sign in to your account</span>
-              <form id="stripe-login" action="login.php" method="post">
+              <form id="login-gamen" action="login.php" method="post">
                 <div class="field padding-bottom--24">
                   <label for="email">E-mail</label>
                   <input type="email" name="email">　<!-- メールアドレス入力ボックス -->
@@ -52,9 +52,9 @@ if (!isset($_SESSION['email_db'])) { }
 
                 <div class="field padding-bottom--24">
                 <input type="submit" name="submit" value="Sign In">
-			    </div>
+			          </div>
 
-                </form>
+              </form>
             </div>
           </div>
 

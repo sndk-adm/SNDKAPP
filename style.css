@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-* {
-	padding: 0;
+* {	padding: 0;
 	margin: 0;
 	color: #1a1f36;
 	box-sizing: border-box;
@@ -9,12 +8,12 @@
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
   }
   body {
-	  min-height: 100%;
-	  background-color: #ffffff;
+	min-height: 100%;
+	background-color: #ffffff;
   }
-  h1 {
-	  letter-spacing: -1px;
-  }
+
+  h1 {letter-spacing: -1px;}
+
   a {
 	color: #5469d4;
 	text-decoration: unset;
@@ -22,6 +21,10 @@
   
   .flex-flex {
 	  display: flex;
+  }
+  .flex-direction--column {
+	-ms-flex-direction: column;
+	flex-direction: column;
   }
   .align-center {
 	align-items: center; 
@@ -32,10 +35,6 @@
   }
   .box-root {
 	  box-sizing: border-box;
-  }
-  .flex-direction--column {
-	  -ms-flex-direction: column;
-	  flex-direction: column;
   }
   
   .box-divider--light-all-2 {
@@ -118,7 +117,8 @@
 	  padding: 8px 16px;
 	  width: 100%;
 	  min-height: 44px;
-	  border: 1px solid #b1b1b6;
+	  background-color: #d9f2f8;
+	  border: 1px sorid #4f4f52;
 	  border-radius: 4px 　
 	  }
   
@@ -128,7 +128,8 @@
 		padding: 8px 16px;
 		width: 100%;
 		min-height: 44px;
-		border: 1px solid #b1b1b6;
+		background-color: #d9f2f8;
+		border: 1px sorid #4f4f52;
 		border-radius: 4px 　
 		}
 
@@ -140,7 +141,7 @@
 	  padding: 8px 16px;
 	  border-radius: 4px;
 	  width: 100%;
-	  min-height: 44px;
+	  min-height: 50px;
 	  font-weight: 600;
 	  cursor: pointer;
   	}
@@ -173,5 +174,8 @@
   }
   
   @keyframes animationLeftRight {
-	/* アニメーション指定はなし */
-  } 
+	/* アニメーション指定はなし */ } 
+
+  @media (max-width:640px) {
+		
+	}
