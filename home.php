@@ -13,7 +13,6 @@ if (!isset($_SESSION['email_db'])) {
 <html>
  <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="style.css">
@@ -29,6 +28,7 @@ if (!isset($_SESSION['email_db'])) {
         <nav class="nav_content">
           <ul class="nav_list">
             <a class="atama">Menu</a>
+            <Br>
             <li class="nav_item"><a href="">User Info</a></li>
             <li class="nav_item"><a href="">History</a></li>
             <li class="nav_item"><a href="">Application</a></li>
@@ -64,11 +64,12 @@ if (!isset($_SESSION['email_db'])) {
   <!-- メイン画面 -->
   <dl class="info">
   <dt><span>Information</span></dt>
-  <dd><time>2020.7.29</time><a href="#">【5時間限定】今なら50%OFFセール中！</a></dd>
+  <dd><time>2020.7.29</time><a href="#">今なら50%OFFセール中！</a></dd>
   <dd><time>2020.7.30</time><a href="#">夏季休暇のお知らせ</a></dd>
   <dd><time>2020.7.31</time><a href="#">臨時休業のお知らせ</a></dd>
   <div></div>
-  <dt><span>Wait Appove</span></dt>
+
+  <dt><span>Waiting for Appoval</span></dt>
   
   <div class="container">
       <ol>
@@ -91,6 +92,7 @@ if (!isset($_SESSION['email_db'])) {
     <!-- フッター開始 -->
     <div class="footer-link padding-top--24">
     <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+    <!-- smallタグで一回り小さいサイズで表示されます。 -->
     <small>&copy;Copyright　-   SIAM NDK . All rights reserved.</small>
     </div>
     </div>

@@ -136,7 +136,7 @@
 		}
 
 	input[type="submit"] {
-	  font-size: 16px;
+	  font-size: 18px;
 	  background-color: #3a3ae9;
 	  border: 1px solid #3a3ae9;
 	  color: #ffffff;
@@ -165,11 +165,11 @@
 	  text-align: center;
 	  font-weight: 600;
   }
-  .footer-link span {
+  .footer-link{
 	  font-size: 14px;
 	  text-align: center;
   }
-  .listing a {
+  .listing{
 	  color: #697386;
 	  font-weight: 600;
 	  margin: 0 10px;
