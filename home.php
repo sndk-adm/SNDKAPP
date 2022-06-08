@@ -44,7 +44,7 @@ if (!isset($_SESSION['email_db'])) {
 
 
   <!-- ログインユーザー情報の表示 -->
-
+  <p>
   <?php
     //session_start();
      if ($_SESSION['prefix_en']==0) {
@@ -60,7 +60,7 @@ if (!isset($_SESSION['email_db'])) {
      echo '<br>';
      echo "　 E-mail :".$_SESSION['email_db'];
   ?>
-  
+  </p>
   <!-- メイン画面 -->
   <dl class="info">
   <dt><span>Information</span></dt>
