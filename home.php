@@ -64,9 +64,9 @@ if (!isset($_SESSION['email_db'])) {
   <!-- メイン画面 -->
   <dl class="info">
   <dt><span>Information</span></dt>
-  <dd><time>2020.7.29</time><a href="#">今なら50%OFFセール中！</a></dd>
-  <dd><time>2020.7.30</time><a href="#">夏季休暇のお知らせ</a></dd>
-  <dd><time>2020.7.31</time><a href="#">臨時休業のお知らせ</a></dd>
+  <dd><time>2020.7.29</time><a href="#">今なら50%OFFセール中！</a></dd><br>
+  <dd><time>2020.7.30</time><a href="#">夏季休暇のお知らせ</a></dd><br>
+  <dd><time>2020.7.31</time><a href="#">臨時休業のお知らせ</a></dd><br>
   <div></div>
 
   <dt><span>Waiting for Appoval</span></dt>
