@@ -39,6 +39,7 @@ if (!isset($_SESSION['email_db'])) {
     </header>
     
     <div>
+      <!-- 会社名下のライン -->
       <hr style="width: 100%;border-top: 5px solid #5469d4;" />
     </div>
 
@@ -56,11 +57,13 @@ if (!isset($_SESSION['email_db'])) {
      else {
      }
      echo '<br>';
-     echo "<p>";
-     echo "　 Welcome ---> Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
+     echo '<p>';
+     echo "　 Welcome ---> Code :".$_SESSION['empcode'];
+     echo '<br>';
+     echo " - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
      echo '<br>';
      echo "　 E-mail :".$_SESSION['email_db'];
-     echo "</p>";
+     echo '</p>';
   ?>
 
   <!-- メイン画面 -->

@@ -117,8 +117,8 @@
 
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked ~ .nav_content {
-  left: 0;/* メニューを画面に入れる padding 上 右 下 左 */
-  padding:0% 0% 0% 10%;
+  left: 0;
+  padding:0% 0% 0% 10%;/* メニューを画面に入れる padding 上 右 下 左 */
 }
 
 
@@ -135,9 +135,9 @@
   flex-wrap: wrap;
   max-width: 100%; /* インフォメーションボックスの画面最大化 */
   height: auto;
-  padding: 0px 20px;
+  padding: 0px 20px;/* padding 上 右 下 左 */
   margin: 0 auto;
-  overflow-y: scroll /*右にはみ出た部分が隠れてスクロース*/
+  /* overflow-y: scroll 右にはみ出た部分が隠れてスクロース */
 }
 
 .info dd,
