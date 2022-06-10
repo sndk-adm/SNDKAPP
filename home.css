@@ -16,7 +16,10 @@
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
   text-decoration: unset;
 }
-.p  {color: #5469d4;}
+.p  {
+  font-size: 30px;
+  color: #5469d4;
+}
 
 /* ここから下がハンバーガーメニューに関するCSS */
   
@@ -91,12 +94,13 @@
 /* メニュー黒ポチを消す */
 .nav_list {
   padding-top: 40px;
-  list-style: square;
+  list-style: none;/* 箇条書きの頭を変更 */
   font-size: 25px;
   color: #5469d4;
   padding-left: 30px;
   left: 80%;
-}　/* list-styleをnoneから変更 */
+}　
+
 
 .atama{
   box-sizing: border-box;
@@ -124,35 +128,24 @@
   /* webkit Crome safari 対応 */
   -webkit-overflow-scrolling: touch;
   -webkit-box-orient: vertical;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+  -webkit-box-direction: normal; /* インフォメーションボックス表示方向 normal か reverse */
   display: -webkit-box;
   display: flex; /* ブロックレベルでフレックスコンテナのボックスを形成する */
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 100%; /* インフォメーションボックスの画面最大化 */
-  height: 500px;
+  height: auto;
   padding: 0px 20px;
   margin: 0 auto;
   overflow-y: scroll /*右にはみ出た部分が隠れてスクロース*/
 }
 
-
-
 .info dd,
-
 .info dt {
   box-sizing: border-box;
   width: 100%;
-  padding-bottom: .5em;
   margin-bottom: .5em;
   border-bottom: 1px dotted #343a40;
-}
-
-
-.info dt:first-of-type {
-  padding-top: .5em;
-  /* border-top: 1px dotted #343a40 */
 }
 
 .info dt span {
@@ -170,27 +163,20 @@
 
 .info time {
   color: #adb5bd;
-  padding-top: .5em;
+  /* padding-top: .5em; */
 
 }
 
 .info dd {
-  width: calc(100% - 12.5em);
+  width: calc(100%);
   padding-left: 0.5em;
-}
-.info dd:first-of-type {
-  padding-top: .5em;
-  /* border-top: 1px dotted #343a40 */
-}
-.info dd time {
-  margin-right: .5em
 }
 
 
 /* サークル設定 */
 .container {
-  height: 80px;
-  width: 100%;
+  height: auto;
+  width: auto;
   /* text-align: center; */
 }
 
@@ -234,9 +220,10 @@
     text-decoration: unset;
   }
   .info {
+    /* 惰性付きのスクロールで、コンテンツはスクロールのジェスチャーが終了し、タッチパネルから指を離した後もスクロールを続けます。 */
     -webkit-overflow-scrolling: touch;
     -webkit-box-orient: vertical;
-    -webkit-box-orient: horizontal;
+    /* box-orientプロパティで horizontal を指定すると、ボックス内の子ボックスが水平に配置されます。 また、vertical を指定すると、ボックス内の子ボックスが垂直に配置されます。 */
     -webkit-box-direction: normal;
     padding: 0px 20px;
     flex-direction: column;
@@ -252,10 +239,6 @@
       border-bottom: 1px dotted #343a40
     }  
     
-}
-
-.info dd:nth-of-type(-n+3) {
-  position: relative
 }
 
 .atama{

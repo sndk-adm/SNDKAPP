@@ -44,7 +44,7 @@ if (!isset($_SESSION['email_db'])) {
 
 
   <!-- ログインユーザー情報の表示 -->
-  <p>
+  
   <?php
     //session_start();
      if ($_SESSION['prefix_en']==0) {
@@ -56,11 +56,13 @@ if (!isset($_SESSION['email_db'])) {
      else {
      }
      echo '<br>';
+     echo "<p>";
      echo "　 Welcome ---> Code :".$_SESSION['empcode']." - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
      echo '<br>';
      echo "　 E-mail :".$_SESSION['email_db'];
+     echo "</p>";
   ?>
-  </p>
+
   <!-- メイン画面 -->
   <dl class="info">
   <dt><span>Information</span></dt>
