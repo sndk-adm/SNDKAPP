@@ -8,7 +8,6 @@
   padding: 0 20px;
   background: #fff;
 }
-
 .logo {
   letter-spacing: -1px;
   font-size: 35px;
@@ -16,12 +15,14 @@
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
   text-decoration: unset;
 }
-.p  {
+p  {
   font-size: 30px;
   color: #5469d4;
 }
-
-/* ここから下がハンバーガーメニューに関するCSS */
+hh1{
+font-size: 50px;
+}
+/* ここから下がハンバーガーメニューに関するCSS ---------------------------------------------------*/
   
 /* チェックボックスを非表示にする */
 .drawer_hidden {
@@ -94,13 +95,18 @@
 /* メニュー黒ポチを消す */
 .nav_list {
   padding-top: 40px;
+  font-size: 25px;
+  color: #5469d4;
+  padding-left: 20px;
+  left: 90%;
+}　
+.nav_item {
+  padding-top: 10px;
   list-style: none;/* 箇条書きの頭を変更 */
   font-size: 25px;
   color: #5469d4;
-  padding-left: 30px;
-  left: 80%;
+  padding-left: 10%;
 }　
-
 
 .atama{
   box-sizing: border-box;

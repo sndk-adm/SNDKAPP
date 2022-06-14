@@ -18,7 +18,7 @@ if (!isset($_SESSION['email_db'])) { }
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">　<!--デバイスによってCSS変更 -->
   <title>Sign-in</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" > <!--削除 style="flex-grow: 1; z-index: 9;" -->

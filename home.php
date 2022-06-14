@@ -1,22 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="index.css">
+  <title> LOGIN MENU </title>
+
 <?php
 session_start();
 //ログインしていない場合はログイン画面に誘導
 if (!isset($_SESSION['email_db'])) {
   echo '<br>';
-  echo "<a href='/index.php'>Please login here again / こちらからログインしてください</a>";
+  echo "<hh1><a href='/index.php'>Please login here again / こちらからログインしてください</a></hh1>";
   echo '<br>';
   exit;}
    else{ }
 ?>
-
-<!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="style.css">
-  <title> LOGIN MENU </title>
 
   <body>
     <header class="header">
@@ -33,6 +33,7 @@ if (!isset($_SESSION['email_db'])) {
             <li class="nav_item"><a href="">History</a></li>
             <li class="nav_item"><a href="">Application</a></li>
             <li class="nav_item"><a href="">Contact</a></li>
+            <li class="nav_item"><a href="logout.php">Logout</a></li>
           </ul>
         </nav>
       </div>
@@ -69,6 +70,7 @@ if (!isset($_SESSION['email_db'])) {
   <!-- メイン画面 -->
   <dl class="info">
   <dt><span>Information</span></dt>
+  <br>
   <dd><time>2020.7.29</time><a href="#">今なら50%OFFセール中！</a></dd><br>
   <dd><time>2020.7.30</time><a href="#">夏季休暇のお知らせ</a></dd><br>
   <dd><time>2020.7.31</time><a href="#">臨時休業のお知らせ</a></dd><br>

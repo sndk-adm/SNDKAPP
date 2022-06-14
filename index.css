@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* クラスセレクタの.(ドット) */
+/* Classセレクタの.(ドット) */
 /* IDセレクタの#(シャープ) */
 
 
@@ -185,13 +185,13 @@
 	/* 480px以下に適用されるCSS（スマホ用）------------------------------------------------------------------------------ */  
   @media screen and (max-width: 480px) {
 
-	/* IOSにCSSを効かせる */
+	/* webkitでIOSにCSSを効かせる */
 	input{-webkit-appearance: none;}
 
 	input[type="email"] {
 		 font-size: 16px;
 		 line-height: 28px;
-		 padding: 8px 16px;
+		 padding: 6px 14px;
 		 width: 100%;
 		 min-height: 44px;
 		 background-color: #d9f2f8;
@@ -201,7 +201,7 @@
 	  input[type="password"] {
 		  font-size: 16px;
 		  line-height: 28px;
-		  padding: 8px 16px;
+		  padding: 6px 14px;
 		  width: 100%;
 		  min-height: 44px;
 		  background-color: #d9f2f8;
@@ -228,7 +228,7 @@
 		.formbg {
 			margin: 0px auto;
 			width: 80%;
-			max-width: 450px; /* ログイン入力ボックスの横幅 */
+			max-width: 470px; /* ログイン入力ボックスの横幅 */
 			background: white;
 			border-radius: 4px;
 			box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;	}
