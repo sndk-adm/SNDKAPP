@@ -58,13 +58,13 @@ if (!isset($_SESSION['email_db'])) {
      else {
      }
      echo '<br>';
-     echo '<p>';
+     echo '<hh1>';
      echo "　 Welcome ---> Code :".$_SESSION['empcode'];
      echo '<br>';
-     echo " - ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
+     echo "　 ".$_SESSION['prefix_en'].$_SESSION['name_en_db']." ".$_SESSION['surname_en_db'];
      echo '<br>';
      echo "　 E-mail :".$_SESSION['email_db'];
-     echo '</p>';
+     echo '</hh1>';
   ?>
 
   <!-- メイン画面 -->
@@ -72,12 +72,12 @@ if (!isset($_SESSION['email_db'])) {
   <dt><span>Information</span></dt>
   <br>
   <dd><time>2020.7.29</time><a href="#">今なら50%OFFセール中！</a></dd><br>
-  <dd><time>2020.7.30</time><a href="#">夏季休暇のお知らせ</a></dd><br>
+  <dd><time>2020.7.30</time><a href="#">夏季休暇のお知らせ</a></dd>
   <dd><time>2020.7.31</time><a href="#">臨時休業のお知らせ</a></dd><br>
   <div></div>
 
   <dt><span>Waiting for Appoval</span></dt>
-  
+  <br>
   <div class="container">
       <ol>
         <li>

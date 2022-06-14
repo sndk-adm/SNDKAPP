@@ -60,6 +60,9 @@
   .padding-top--64 {
 	padding-top: 64px;
   }
+  .padding-top--12 {
+	padding-top: 12px;
+  }
   .padding-top--24 {
 	padding-top: 24px;
   }
@@ -69,7 +72,7 @@
   .padding-bottom--24 {
 	padding-bottom: 24px;
   }
-  .padding-horizontal--48 {
+  .padding-horizontal {
 	padding: 48px;
   }
   .padding-bottom--15 {
@@ -85,14 +88,14 @@
   .formbg {
 	  margin: 0px auto;
 	  width: 100%;
-	  max-width: 450px; /* ログイン入力ボックスの横幅 */
+	  max-width: 470px; /* ログイン入力ボックスの横幅 */
 	  background: white;
 	  border-radius: 4px;
 	  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   }
   span {
 	  display: block;
-	  font-size: 15px;
+	  font-size: 18px;
 	  line-height: 20px;
 	  color: #1a1f36;
   }
@@ -101,42 +104,42 @@
   }
   .reset-pass a,label {
 	  font-size: 14px;
-	  font-weight: 600;
+	  font-weight: 600;/* 文字の太さを指定 */
 	  display: block;
   }
+  
   .reset-pass > a {
-	  text-align: right;
-	  margin-bottom: 10px;
+	  text-align: right;/* 右寄せ */
+	  margin-bottom: 15px;
   }
   .grid--50-50 {
 	  display: grid;
-	  grid-template-columns: 50% 50%;
+	  grid-template-columns: 50% 50%;/* 2分割のグリッドレイアウトを作る */
 	  align-items: center;
   }
   
   input{
 	-webkit-appearance: none;
+	border-radius: 4px 
 	} /* IOSにCSSを効かせる */
  
 	input[type="email"] {
 	  font-size: 16px;
-	  line-height: 28px;
-	  padding: 8px 16px;
+	  line-height: 28px;/* 文章の行の高さを設定 */
+	  padding: 4px 16px;
 	  width: 100%;
 	  min-height: 44px;
 	  background-color: #d9f2f8;
 	  border: 1px sorid #4f4f52;
-	  border-radius: 4px 　
 	  }
 	input[type="password"] {
 		font-size: 16px;
 		line-height: 28px;
-		padding: 8px 16px;
+		padding: 4px 16px;
 		width: 100%;
 		min-height: 44px;
 		background-color: #d9f2f8;
-		border: 1px sorid #4f4f52;
-		border-radius: 4px 　
+		border: 1px sorid #4f4f52; 　
 		}
 
 	input[type="submit"] {
@@ -185,6 +188,9 @@
 	/* 480px以下に適用されるCSS（スマホ用）------------------------------------------------------------------------------ */  
   @media screen and (max-width: 480px) {
 
+	.padding-horizontal {
+		padding: 20px;
+	}
 	/* webkitでIOSにCSSを効かせる */
 	input{-webkit-appearance: none;}
 

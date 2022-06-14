@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">　<!--デバイスによってCSS変更 -->
+  <title>Sign-in</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
 <?php
 session_start();
 //ログイン済みの場合はホーム画面へ誘導
@@ -12,23 +21,15 @@ if (!isset($_SESSION['email_db'])) { }
    }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">　<!--デバイスによってCSS変更 -->
-  <title>Sign-in</title>
-  <link rel="stylesheet" href="index.css">
-</head>
 <body>
-      <div class="box-root padding-top--24 flex-flex flex-direction--column" > <!--削除 style="flex-grow: 1; z-index: 9;" -->
+      <div class="box-root padding-top--12 flex-flex flex-direction--column" > <!--削除 style="flex-grow: 1; z-index: 9;" -->
         <div class="box-root padding-bottom--24 flex-flex flex-justifyContent--center"> <!--削除 padding-top--48  -->
           <h1><a>SIAM NDK CO.,LTD.</a></h1>
         </div>
 
         <div class="formbg-outer">
           <div class="formbg">
-            <div class="formbg-inner padding-horizontal--48">
+            <div class="padding-horizontal">
               <span class="padding-bottom--15">Sign in to your account</span>
               <form id="login-gamen" action="login.php" method="post">
                 <div class="field padding-bottom--24">
@@ -36,19 +37,18 @@ if (!isset($_SESSION['email_db'])) { }
                   <input type="email" name="email">　<!-- メールアドレス入力ボックス -->
                 </div>
                 <div class="field padding-bottom--24">
-                  <div class="grid--50-50">
-                    <label for="password">Password</label>
-                    <div class="reset-pass">
-                      <a href="#">Forgot your password?</a>
-                    </div>
-                  </div>
+                    <label for="password">Password</label>                    
                   <input type="password" name="login_pass"> <!-- パスワード入力ボックス -->
                 </div>
-                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                <div class="reset-pass">
+                      <a href="#">Forgot your password?</a>
+                </div>
+                <!-- サインイン継続のチェックボックスを削除 -->
+                <!-- <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                   <label for="checkbox">
                     <input type="checkbox" name="checkbox"> Stay signed in for a week
                   </label>
-                </div>
+                </div> -->
 
                 <div class="field padding-bottom--24">
                 <input type="submit" name="submit" value="Sign In">

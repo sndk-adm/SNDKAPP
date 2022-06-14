@@ -20,7 +20,7 @@ p  {
   color: #5469d4;
 }
 hh1{
-font-size: 50px;
+font-size: 15px;
 }
 /* ここから下がハンバーガーメニューに関するCSS ---------------------------------------------------*/
   
@@ -95,6 +95,7 @@ font-size: 50px;
 /* メニュー黒ポチを消す */
 .nav_list {
   padding-top: 40px;
+  list-style: none;/* 箇条書きの頭を変更 */
   font-size: 25px;
   color: #5469d4;
   padding-left: 20px;
@@ -146,18 +147,21 @@ font-size: 50px;
   /* overflow-y: scroll 右にはみ出た部分が隠れてスクロース */
 }
 
-.info dd,
+.info dd{
+width: calc(100%);
+border-bottom: 1px dotted #343a40;
+padding-left: 0.5em;
+}
 .info dt {
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: .5em;
-  border-bottom: 1px dotted #343a40;
+  margin-bottom: .5em; 
 }
 
 .info dt span {
   box-sizing: border-box;
   display: inline-block;
-  width: 15em;
+  width: 18em;
   margin-right: .5em;
   padding: 0 .5em;
   background-color: #5469d4;
@@ -169,13 +173,7 @@ font-size: 50px;
 
 .info time {
   color: #adb5bd;
-  /* padding-top: .5em; */
-
-}
-
-.info dd {
-  width: calc(100%);
-  padding-left: 0.5em;
+  padding-right: 2em;
 }
 
 
@@ -231,7 +229,7 @@ font-size: 50px;
     -webkit-box-orient: vertical;
     /* box-orientプロパティで horizontal を指定すると、ボックス内の子ボックスが水平に配置されます。 また、vertical を指定すると、ボックス内の子ボックスが垂直に配置されます。 */
     -webkit-box-direction: normal;
-    padding: 0px 20px;
+    padding: 0px 20px;/* padding 上 右 下 左 */
     flex-direction: column;
     flex-wrap: nowrap;
     }
@@ -252,7 +250,7 @@ font-size: 50px;
   display: inline-block;
   width: 10em;
   margin-right: .5em;
-  padding: 0 .5em;
+  padding: 0 .5em;/* padding 上 右 下 左 */
   background-color: #5469d4;
   color: #fff;
   font-size: 1.2em;
